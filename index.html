@@ -1,1284 +1,893 @@
 <!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Optimization -->
-    <title>Q.hobby-তে পাচ্ছেন সকল শৌখিন পণ্য ন্যায্য ও সহজ দামে।</title>
-    <meta name="description" content="Q.hobby (কিউ.হবি) হলো একটি বিশ্বস্ত অনলাইন ই-কমার্স প্ল্যাটফর্ম, যেখানে আপনি পাচ্ছেন সব ধরণের শৌখিন এবং প্রয়োজনীয় পণ্য অত্যন্ত সুলভ ও ন্যায্য মূল্যে।">
-    <meta name="keywords" content="Q.hobby, online shopping bangladesh, buy hobby products, q hobby online store, শৌখিন পণ্য, অনলাইন শপিং, ন্যায্য দাম">
-    <meta name="author" content="Q.hobby">
-    
-    <!-- Open Graph / Facebook / WhatsApp SEO -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Q.hobby-তে পাচ্ছেন সকল শৌখিন পণ্য ন্যায্য ও সহজ দামে।">
-    <meta property="og:description" content="Q.hobby (কিউ.হবি) তে পাচ্ছেন সব ধরণের শৌখিন পণ্য অত্যন্ত সুলভ ও ন্যায্য মূল্যে। আজই ভিজিট করুন!">
-    <meta property="og:image" content="https://i.ibb.co/9kkZ5m6g/2847.png">
-    
-    <link rel="icon" type="image/png" href="https://i.ibb.co/9kkZ5m6g/2847.png">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q.hobby | সকল শৌখিন পণ্য ন্যায্য ও সহজ দামে | Online Shopping Bangladesh</title>
+  <meta name="description" content="Q.hobby (কিউ.হবি) হলো একটি বিশ্বস্ত অনলাইন ই-কমার্স প্ল্যাটফর্ম, যেখানে পাচ্ছেন সব ধরণের শৌখিন এবং প্রয়োজনীয় পণ্য অত্যন্ত সুলভ ও ন্যায্য মূল্যে।">
+  <meta name="keywords" content="Q.hobby, online shopping bangladesh, buy hobby products, q hobby online store, শৌখিন পণ্য, অনলাইন শপিং, হস্তশিল্প">
+  <meta name="author" content="Q.hobby">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { 'bangla': ['Hind Siliguri', 'sans-serif'] },
-                    colors: {
-                        brand: { dark: '#0f172a', purple: '#8b5cf6', pink: '#ec4899', cyan: '#06b6d4' }
-                    }
-                }
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Q.hobby | সকল শৌখিন পণ্য ন্যায্য ও সহজ দামে">
+  <meta property="og:description" content="Q.hobby তে পাচ্ছেন সব ধরণের শৌখিন পণ্য অত্যন্ত সুলভ ও ন্যায্য মূল্যে। আজই ভিজিট করুন!">
+  <meta property="og:image" content="https://i.ibb.co/9kkZ5m6g/2847.png">
+
+  <link rel="icon" type="image/png" href="https://i.ibb.co/9kkZ5m6g/2847.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            bangla: ['Hind Siliguri', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#0a0f1d',
+              cyan: '#06b6d4',
+              purple: '#8b5cf6',
+              pink: '#ec4899',
+              amber: '#f59e0b',
             }
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-        body { font-family: 'Hind Siliguri', sans-serif; background-color: #0f172a; color: #f8fafc; overflow-x: hidden; padding-bottom: 80px; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #06b6d4, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section { display: none; padding: 20px 15px; max-width: 1200px; margin: 0 auto; animation: fadeIn 0.3s ease; }
-        .section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; justify-content: space-around; padding: 12px 0; z-index: 1000; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); }
-        .nav-item { display: flex; flex-direction: column; align-items: center; color: #94a3b8; font-size: 0.8rem; cursor: pointer; }
-        .nav-item.active { color: #06b6d4; }
-        .nav-item i { font-size: 1.4rem; margin-bottom: 4px; }
-        .q-card { background: rgba(255, 255, 255, 0.05); border-radius: 16px; overflow: hidden; margin-bottom: 20px; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; }
-        .q-card:hover { transform: translateY(-3px); border-color: #8b5cf6; }
-        .notification { position: fixed; top: 80px; right: 20px; background: #8b5cf6; color: white; padding: 15px 20px; border-radius: 8px; z-index: 4000; transform: translateX(400px); transition: transform 0.3s; }
-        .notification.show { transform: translateX(0); }
-        .info-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
-        .fixed-action-bar { position: fixed; bottom: 65px; left: 0; right: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 12px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 900; }
-        
-        /* Custom Scrollbar for filter */
-        .filter-scroll::-webkit-scrollbar { height: 4px; }
-        .filter-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
-        
-        /* Custom Scrollbar for Q Data Table */
-        .table-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
-        .table-scroll::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.5); border-radius: 4px; }
-
-        /* Three dot dropdown menu */
-        .dropdown-menu { position: absolute; right: 0; top: 110%; min-width: 220px; background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 1200; overflow: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: all 0.2s ease; }
-        .dropdown-menu.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
-        .dropdown-item { display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; cursor: pointer; font-size: 0.95rem; transition: background 0.2s; }
-        .dropdown-item:hover { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
-    </style>
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="antialiased relative">
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
 
-    <div id="notification" class="notification"></div>
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="fixed top-20 right-4 z-50 p-4 rounded-2xl border shadow-2xl flex items-center gap-3 backdrop-blur-xl transition-all duration-300 text-sm font-medium hidden"></div>
 
-    <nav class="fixed w-full z-50 glass transition-all duration-300 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="https://i.ibb.co/9kkZ5m6g/2847.png" alt="Logo" class="w-8 h-8 rounded-full">
-                    <a href="#" class="text-2xl font-bold tracking-wider text-white" onclick="switchTab('home')">Q.<span class="text-brand-cyan">hobby</span></a>
-                </div>
-                <div class="flex items-center gap-3">
-                    <!-- Complain Button -->
-                    <button onclick="switchTab('complain')" class="text-amber-400 hover:text-amber-300 font-bold px-3 py-1.5 rounded-lg border border-amber-500/40 bg-amber-500/10 text-sm flex items-center gap-1.5 shadow-lg shadow-amber-500/10 transition-all duration-300">
-                        <i class="fas fa-headset text-base"></i>অভিযোগ
-                    </button>
-                    <!-- Admin Settings Icon -->
-                    <button onclick="switchTab('admin')" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <i class="fas fa-cog text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div style="height: 64px;"></div>
+  <!-- Global Modal Overlay -->
+  <div id="globalModalOverlay" class="modal-overlay" onclick="if(event.target === this) App.closeModal()">
+    <div id="globalModalContainer" class="w-full flex items-center justify-center p-2 sm:p-4"></div>
+  </div>
 
-    <main>
-        <!-- HOME SECTION -->
-        <section id="homeSection" class="section active">
-            <div class="text-center mb-8 mt-4">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">স্বাগতম <span class="text-gradient">Q.hobby</span> তে</h1>
-                <p class="text-gray-400">ডিজিটাল দুনিয়ায় আপনার বিশ্বস্ত পার্টনার</p>
-            </div>
-            <h2 class="text-xl font-bold text-white mb-4 border-l-4 border-brand-purple pl-3">Q Hub Update</h2>
-            <div id="homeFeed" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-        </section>
-
-        <!-- SHOP SECTION -->
-        <section id="shopSection" class="section">
-            <h2 class="text-2xl font-bold text-white mb-4 border-l-4 border-brand-cyan pl-3">আমাদের প্রোডাক্টস (Shop)</h2>
-            
-            <!-- Filters & Search -->
-            <div class="mb-6">
-                <div class="flex gap-2 overflow-x-auto filter-scroll pb-2 mb-4 whitespace-nowrap">
-                    <button onclick="filterPrice(Infinity, this)" class="price-btn bg-brand-cyan text-white px-4 py-1.5 rounded-full text-sm font-bold border border-white/10 shrink-0">সব প্রোডাক্ট</button>
-                    <button onclick="filterPrice(50, this)" class="price-btn bg-white/10 text-gray-300 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm border border-white/10 shrink-0">৫০৳ মধ্যে</button>
-                    <button onclick="filterPrice(100, this)" class="price-btn bg-white/10 text-gray-300 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm border border-white/10 shrink-0">১০০৳ মধ্যে</button>
-                    <button onclick="filterPrice(300, this)" class="price-btn bg-white/10 text-gray-300 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm border border-white/10 shrink-0">৩০০৳ মধ্যে</button>
-                    <button onclick="filterPrice(500, this)" class="price-btn bg-white/10 text-gray-300 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm border border-white/10 shrink-0">৫০০৳ মধ্যে</button>
-                    <button onclick="filterPrice(800, this)" class="price-btn bg-white/10 text-gray-300 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm border border-white/10 shrink-0">৮০০৳ মধ্যে</button>
-                </div>
-                <div class="relative">
-                    <input type="text" id="shopSearch" oninput="filterSearch()" placeholder="প্রোডাক্ট খুঁজুন..." class="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-white focus:outline-none focus:border-brand-cyan">
-                    <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
-                </div>
-            </div>
-
-            <div id="shopGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-        </section>
-
-        <!-- PRODUCT DETAILS SECTION -->
-        <section id="productDetailSection" class="section pb-32">
-            <button onclick="switchTab('shop')" class="mb-4 text-brand-cyan"><i class="fas fa-arrow-left"></i> ব্যাক টু শপ</button>
-            <div id="productDetailContent" class="max-w-2xl mx-auto"></div>
-            
-            <div id="fixedActionBar" class="fixed-action-bar hidden">
-                <div class="max-w-2xl mx-auto flex gap-3">
-                    <a id="stickyBuyBtn" href="#" class="flex-1 bg-brand-cyan text-center py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2">
-                        <i class="fas fa-shopping-cart"></i> Buy
-                    </a>
-                    <a id="stickyGiftBtn" href="#" class="flex-1 bg-brand-pink text-center py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2">
-                        <i class="fas fa-gift"></i> Gift
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ORDER SECTION -->
-        <section id="orderSection" class="section pb-32">
-            <div class="glass p-6 md:p-8 rounded-2xl max-w-2xl mx-auto border border-brand-purple/30 shadow-lg shadow-brand-purple/10">
-                <button onclick="switchTab('productDetail')" class="mb-6 text-brand-cyan hover:text-white transition"><i class="fas fa-arrow-left"></i> প্রোডাক্টে ফিরে যান</button>
-                
-                <h2 class="text-2xl font-bold text-center mb-6" id="orderTitle">অর্ডার ফর্ম</h2>
-
-                <!-- ORDER FORM -->
-                <div id="orderFormContainer">
-                    <form id="orderForm" class="space-y-4">
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">আপনার পুরো নাম <span class="text-red-500">*</span></label>
-                            <input type="text" id="oName" required placeholder="আপনার সম্পূর্ণ নাম লিখুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-cyan focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">What'sApp মোবাইল নম্বর <span class="text-red-500">*</span></label>
-                            <input type="tel" id="oPhone" required placeholder="01XXXXXXXXX" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-cyan focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">অতিরিক্ত মোবাইল নম্বর: (যদি থাকে)</label>
-                            <input type="tel" id="oAltPhone" placeholder="বিকল্প নম্বর" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-cyan focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">সম্পূর্ণ ঠিকানা <span class="text-red-500">*</span></label>
-                            <textarea id="oAddress" required rows="2" placeholder="বাড়ি নং, রাস্তা, এলাকা, জেলা" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-cyan focus:outline-none"></textarea>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-gray-300 text-sm mb-1 ml-1">পণ্যের সংখ্যা <span class="text-red-500">*</span></label>
-                                <input type="number" id="oQuantity" min="1" value="1" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-cyan focus:outline-none" oninput="updateOrderPrice()">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 text-sm mb-1 ml-1">মোট মূল্য <span class="text-red-500">*</span></label>
-                                <input type="text" id="oPrice" readonly class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-brand-cyan font-bold focus:outline-none cursor-not-allowed">
-                            </div>
-                        </div>
-                        <p class="text-xs text-brand-pink mt-1"><i class="fas fa-info-circle"></i> বি:দ্র: ডেলিভারি চার্জসহ মোট মূল্য What'sApp সেলার বলবে বা আপনি ডেলিভারি কনফার্ম এর আগে অবশ্যই জেনে নিবেন।</p>
-
-                        <button type="button" onclick="proceedToTerms()" class="w-full bg-gradient-to-r from-brand-cyan to-brand-purple text-white font-bold py-4 rounded-xl mt-4 hover:shadow-lg transition">
-                            Place Order <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- TERMS & CONDITIONS -->
-                <div id="termsContainer" class="hidden mt-2">
-                    <div class="bg-black/20 p-5 rounded-xl border border-white/10">
-                        <h3 class="text-lg font-bold text-brand-pink mb-4">নিচের শর্তাবলীতে সম্মতি প্রয়োজন :</h3>
-                        <ul class="text-sm text-gray-300 space-y-3 mb-5 leading-relaxed">
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>১. পণ্যটি সম্পর্কে সকল তথ্য পড়ুন। রিটার্ন পলিসি, মূল্য, ডেলিভারি সিস্টেম ভালোভাবে দেখুন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>২. পণ্যটির ডেলিভারি, দাম, মান ইত্যাদি সম্পর্কে সেলার এর থেকে নিশ্চিত হয়ে নিন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৩. পণ্যটির ডেলিভারি প্রক্রিয়া, দামসহ নানা কিছু পরিবর্তন হতে পারে, এসব সেলারের থেকে জেনে নিন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৪. পণ্যটি নিশ্চিতভাবে না পাওয়া পর্যন্ত সেলার এর সাথে প্রয়োজনীয় আলাপ, টাকা প্রদানের সনদ ভালোভাবে সংরক্ষণ করুন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৫. সঠিক পণ্যের ডেলিভারি না পেলে বা আর্থিক প্রতারিত হলে তা আপনি আমাদের অভিযোগ করতে পারেন, কিন্তু মনে রাখবেন <strong>"এর জন্য আমারা তথা Q.hobby কোনো দায়ভার নিব না।"</strong></li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৬. শর্তাবলীতে যেকোনো সময় আপডেট আসতে পারে তাই, আপনি চাইলে এটি সংরক্ষণ করতে পারেন।</li>
-                        </ul>
-                        
-                        <label class="flex items-start gap-3 mt-4 mb-6 cursor-pointer bg-white/5 p-4 rounded-lg border border-brand-cyan/30 hover:bg-white/10 transition">
-                            <input type="checkbox" id="oAgree" class="mt-1 w-5 h-5 accent-brand-cyan rounded">
-                            <span class="text-sm text-gray-200">আমি এই মর্মে সম্মত হচ্ছি যে, আমার বয়স ১৮ এর উর্ধ্বে (বা অভিভাবকের অনুমতি ও সহায়তা আছে), আমি উপরের সকল শর্ত সজ্ঞানে ও সুস্থ মস্তিষ্কে পড়েছি, বুঝেছি এবং বিক্রেতাকে না ঠকানোর প্রতিজ্ঞা করছি।</span>
-                        </label>
-                    </div>
-
-                    <div class="flex gap-3 mt-6">
-                        <button type="button" onclick="goBackToForm()" class="bg-white/10 text-white font-bold py-4 px-6 rounded-xl hover:bg-white/20 transition">
-                            Back
-                        </button>
-                        <button type="button" onclick="submitFinalOrder()" class="flex-1 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold py-4 rounded-xl hover:shadow-lg transition flex justify-center items-center gap-2">
-                            <span>Send to WhatsApp</span> <i class="fab fa-whatsapp text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- COMPLAIN SECTION -->
-        <section id="complainSection" class="section">
-            <div class="glass p-6 md:p-8 rounded-2xl max-w-md mx-auto border border-amber-500/30 shadow-lg shadow-amber-500/10">
-                <h2 class="text-2xl font-bold text-amber-400 mb-6 text-center"><i class="fas fa-headset mr-2"></i>অভিযোগ পাঠান</h2>
-                <form id="complainForm" class="space-y-4">
-                    <div>
-                        <label class="block text-gray-300 text-sm mb-1 ml-1">সেলার ID <span class="text-red-500">*</span></label>
-                        <input type="text" id="cSellerId" required placeholder="সেলার ID লিখুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-400 focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-gray-300 text-sm mb-1 ml-1">অভিযোগের বর্ণনা <span class="text-red-500">*</span></label>
-                        <textarea id="cDescDetails" required rows="4" placeholder="আপনার অভিযোগ বিস্তারিত লিখুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-400 focus:outline-none"></textarea>
-                    </div>
-                    <button type="button" onclick="submitComplain()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl mt-4 transition flex justify-center items-center">
-                        Submit Complain <i class="fas fa-paper-plane ml-2"></i>
-                    </button>
-                </form>
-            </div>
-        </section>
-
-        <!-- SELL SECTION -->
-        <section id="sellSection" class="section">
-            <div class="glass p-6 md:p-8 rounded-2xl max-w-2xl mx-auto">
-                <h2 class="text-2xl font-bold text-brand-pink mb-6 text-center">আপনার পণ্য বিক্রি করুন</h2>
-                
-                <!-- SELL FORM -->
-                <div id="sellFormContainer">
-                    <form id="sellForm" class="space-y-4">
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">পণ্যের নাম <span class="text-red-500">*</span></label>
-                            <input type="text" id="sName" placeholder="পণ্যের নাম লিখুন" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-pink focus:outline-none">
-                        </div>
-
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">পণ্যের মূল্য (৳) <span class="text-red-500">*</span></label>
-                            <input type="number" id="sPrice" placeholder="মূল্য নির্ধারণ করুন" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-pink focus:outline-none">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">মোবাইল নম্বর <span class="text-red-500">*</span></label>
-                            <input type="tel" id="sPhone" placeholder="আপনার মোবাইল নম্বর" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-pink focus:outline-none">
-                        </div>
-
-                        <div>
-                            <label class="block text-gray-300 text-sm mb-1 ml-1">অন্যান্য তথ্য</label>
-                            <textarea id="sOther" rows="3" placeholder="বিবরণ বা অন্যান্য তথ্য..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-pink focus:outline-none"></textarea>
-                        </div>
-                        
-                        <p class="text-brand-pink text-sm text-center mt-2 font-bold bg-white/5 py-2 rounded-lg border border-brand-pink/20">পণ্যটির একটি ছবি অবশ্যই What'sApp এ পাঠাতে হবে।</p>
-
-                        <button type="button" onclick="showSellTerms()" class="w-full bg-gradient-to-r from-brand-cyan to-brand-purple text-white font-bold py-4 rounded-xl mt-4 hover:shadow-lg hover:shadow-brand-purple/30 transition">
-                            Next Step <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- SELL TERMS & CONDITIONS -->
-                <div id="sellTermsContainer" class="hidden mt-2">
-                    <div class="bg-black/20 p-5 rounded-xl border border-white/10">
-                        <h3 class="text-lg font-bold text-brand-pink mb-4">নিচের শর্তাবলীতে সম্মতি প্রয়োজন :</h3>
-                        <ul class="text-sm text-gray-300 space-y-3 mb-5 leading-relaxed">
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>১. পণ্যটির সঠিক তথ্য এবং আপনার সঠিক মোবাইল নম্বর দিন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>২. পণ্যটির ছবিতে কোনো অতিরিক্ত ইফেক্ট ব্যবহার করবেন না;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৩. পণ্যটির অতিরিক্ত মূল্য বা অন্যকোনো সমস্যা থাকে তা কর্তৃপক্ষ মুছে ফেলার ক্ষমতা রাখবে;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৪. পণ্যটির মজুদ শেষ হলে তা আমাদের What'sApp-এ জানাতে হবে;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৫. পণ্যটির দাম বেড়ে গেলে বা কমলে কিংবা অন্য পরিবর্তন হলে আমাদের দিয়ে সংশোধিত হতে পারে।;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৬. পণ্যটির ডেলিভারি এরিয়া,দাম,মান ইত্যাদি সম্পর্কে ক্রেতার থেকে নিশ্চিত হয়ে নিন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৭. পণ্যটি নিশ্চিতভাবে ডেলিভারি না হওয়া পর্যন্ত ক্রেতার সাথে প্রয়োজনীয় আলাপ,টাকা প্রদানের সনদ ভালোভাবে সংরক্ষণ করুন;</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৮. সঠিক পণ্যের ডেলিভারি না হলে বা আর্থিক প্রতারিত হলে তা আপনি আমাদের অভিযোগ করতে পারেন,কিন্তু মনে রাখবেন "এর জন্য আমারা তথা Q.hooby কোনো দায়ভার নিব না।"</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>৯. পণ্যটি ডেলিভারিতে পাঠাও,স্টিডফাস্ট ও সুন্দরবন কুরিয়ার সার্ভিস ব্যাবহার করতে হবে। তাছাড়া অন্য মাধ্যমে করতে চাইলে তা ক্রেতাকে জানাতে হবে।</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>১০. Q.hobby-শুধুমাত্র আপনার পণ্য উপস্থাপন করে তাই ডেরিভারি সম্পর্কিত সকল দায়িত্ব আপনার একার।</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>১১. Q.hooby- আপনার পণ্য বা অন্য যেকোনো প্রয়োজনীয় তথ্য জানার এবং যোগাযোগের অধিকার রাখবে।(তবে আইন-শৃঙ্খলা বা অন্য প্রয়োজনীয় কাজ ছাড়া কর্তৃপক্ষ এ অধিকার রাখবে না)</li>
-                            <li><i class="fas fa-check-circle text-brand-cyan mr-2"></i>১২. শর্তাবলীতে যেকোনো সময় আপডেট আসতে পারে তাই, আপনি চাইলে এটি সংরক্ষণ করতে পারেন।</li>
-                        </ul>
-                        
-                        <label class="flex items-start gap-3 mt-4 mb-6 cursor-pointer bg-white/5 p-4 rounded-lg border border-brand-pink/30 hover:bg-white/10 transition">
-                            <input type="checkbox" id="sAgree" class="mt-1 w-5 h-5 accent-brand-pink rounded">
-                            <span class="text-sm text-gray-200">আমি এই মর্মে সম্মত হচ্ছি যে,আমার বয়স ১৮ এর উর্ধ্বে (বা অভিভাবকের অনুমতি ও সহায়তা আছে),আমি উপরের সকল শর্ত সজ্ঞানে ও সুস্থ মস্তিষ্কে পড়েছি,বুঝেছি এবং ক্রেতাকে না ঠকানোর প্রতিজ্ঞা করছি।</span>
-                        </label>
-                    </div>
-
-                    <div class="flex gap-3 mt-6">
-                        <button type="button" onclick="hideSellTerms()" class="bg-white/10 text-white font-bold py-4 px-6 rounded-xl hover:bg-white/20 transition">
-                            Back
-                        </button>
-                        <button type="button" onclick="submitFinalSell()" class="flex-1 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold py-4 rounded-xl hover:shadow-lg transition flex justify-center items-center gap-2">
-                            <span>Send to WhatsApp</span> <i class="fab fa-whatsapp text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ADMIN SECTION -->
-        <section id="adminSection" class="section">
-            <!-- Login Form -->
-            <div id="adminLoginBox" class="glass p-8 rounded-2xl max-w-md mx-auto text-center">
-                <h3 class="text-2xl font-bold mb-4 text-brand-cyan"><i class="fas fa-user-shield"></i> এডমিন প্যানেল</h3>
-                <input type="email" id="adminEmail" placeholder="অ্যাডমিন ইমেইল দিন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white mb-4">
-                <input type="password" id="adminPass" placeholder="পাসওয়ার্ড দিন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white mb-4">
-                <button onclick="verifyAdmin()" class="w-full bg-brand-purple py-3 rounded-xl font-bold">লগইন</button>
-            </div>
-
-            <!-- Admin Dashboard -->
-            <div id="adminDashboard" style="display: none;" class="space-y-8 max-w-4xl mx-auto">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold text-white">এডমিন ড্যাশবোর্ড</h2>
-                    <div class="flex items-center gap-2">
-                        <!-- Three Dot Menu -->
-                        <div class="relative">
-                            <button onclick="toggleAdminMenu(event)" class="text-gray-300 hover:text-white w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10 transition" title="অপশন মেনু">
-                                <i class="fas fa-ellipsis-v text-xl"></i>
-                            </button>
-                            <div id="adminDropdownMenu" class="dropdown-menu">
-                                <div class="dropdown-item" onclick="openQDataPage()">
-                                    <i class="fas fa-database text-green-400"></i>
-                                    <span>Q Data Page</span>
-                                </div>
-                                <div class="dropdown-item" onclick="closeAdminMenu(); fetchData();">
-                                    <i class="fas fa-sync-alt text-brand-cyan"></i>
-                                    <span>সব ডেটা রিফ্রেশ</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="logoutAdmin()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold transition"><i class="fas fa-sign-out-alt mr-1"></i> লগআউট</button>
-                    </div>
-                </div>
-
-                <!-- Manage Data Section -->
-                <div class="glass p-6 rounded-2xl border-t-4 border-yellow-500 mt-8">
-                    <h4 class="text-lg font-bold mb-4">ডেটা খুঁজুন ও ম্যানেজ করুন</h4>
-                    <select id="manageType" class="w-full bg-gray-800 border border-white/10 p-3 rounded-lg text-white mb-3" onchange="searchAdminData()">
-                        <option value="products">Products</option>
-                        <option value="culture">Q Hub (Culture)</option>
-                    </select>
-                    <input type="text" id="searchData" placeholder="নাম বা টাইটেল দিয়ে খুঁজুন..." class="w-full bg-white/5 border border-white/10 p-3 rounded-lg mb-3 text-white" oninput="searchAdminData()">
-                    <div id="adminDataList" class="space-y-2 mt-4 max-h-60 overflow-y-auto filter-scroll"></div>
-                </div>
-
-                <!-- Add/Edit Product -->
-                <div class="glass p-6 rounded-2xl border-t-4 border-brand-purple">
-                    <h4 class="text-lg font-bold mb-4 text-brand-cyan" id="adminProductTitle">প্রোডাক্ট যোগ করুন</h4>
-                    <input type="hidden" id="pDbId">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" id="pName" placeholder="প্রোডাক্টের নাম" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pPI" placeholder="Product ID (PI)" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="number" id="pPrice" placeholder="মূল্য (৳)" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pSellerId" placeholder="Seller ID" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pSellerName" placeholder="Seller Name" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pSellerPhone" placeholder="Seller WhatsApp (Hidden from user)" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pRating" placeholder="Rating (e.g. 4.5)" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <input type="text" id="pCoupon" placeholder="Coupon Code" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white">
-                        <select id="pStock" class="w-full bg-gray-800 border border-white/10 p-3 rounded-lg text-white">
-                            <option value="In Stock">In Stock</option>
-                            <option value="Out of Stock">Out of Stock</option>
-                        </select>
-                    </div>
-
-                    <textarea id="pDesc" placeholder="Product Description..." class="w-full bg-white/5 border border-white/10 p-3 rounded-lg mt-4 text-white" rows="2"></textarea>
-                    <textarea id="pReturn" placeholder="Return Policy..." class="w-full bg-white/5 border border-white/10 p-3 rounded-lg mt-4 text-white" rows="2"></textarea>
-                    <textarea id="pReview" placeholder="Default Review text..." class="w-full bg-white/5 border border-white/10 p-3 rounded-lg mt-4 text-white" rows="2"></textarea>
-
-                    <div class="mt-4">
-                        <label class="block text-gray-300 mb-2">Available Delivery Courier:</label>
-                        <label class="mr-4 text-sm"><input type="checkbox" id="dPathao" checked> Pathao</label>
-                        <label class="mr-4 text-sm"><input type="checkbox" id="dSteadfast" checked> Steadfast</label>
-                        <label class="text-sm"><input type="checkbox" id="dSundarban" checked> Sundarban</label>
-                    </div>
-
-                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs text-gray-400 mb-1">Product Image</label>
-                            <input type="file" id="pImg" accept="image/*" class="w-full text-gray-400 text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs text-gray-400 mb-1">Seller Image</label>
-                            <input type="file" id="pSellerImg" accept="image/*" class="w-full text-gray-400 text-sm">
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 mt-6">
-                        <button onclick="saveProduct()" class="flex-1 bg-brand-purple py-3 rounded-lg font-bold text-white">প্রোডাক্ট সেভ করুন</button>
-                        <button onclick="resetProductForm()" class="bg-gray-600 px-6 py-3 rounded-lg font-bold text-white">রিসেট</button>
-                    </div>
-                </div>
-
-                <!-- Add/Edit Q Hub (Culture) -->
-                <div class="glass p-6 rounded-2xl border-t-4 border-brand-pink">
-                    <h4 class="text-lg font-bold mb-4 text-brand-pink" id="adminCultureTitle">Q Hub (Culture) ডেটা যোগ করুন</h4>
-                    <input type="hidden" id="cDbId">
-                    <input type="text" id="cTitle" placeholder="টাইটেল" class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white mb-4">
-                    <textarea id="cDesc" placeholder="বিস্তারিত..." class="w-full bg-white/5 border border-white/10 p-3 rounded-lg text-white mb-4" rows="3"></textarea>
-                    
-                    <div class="mb-4">
-                        <label class="block text-xs text-gray-400 mb-1">Upload Image</label>
-                        <input type="file" id="cImg" accept="image/*" class="w-full text-gray-400 text-sm">
-                    </div>
-
-                    <div class="flex gap-4 mt-6">
-                        <button onclick="saveCulture()" class="flex-1 bg-brand-pink hover:bg-pink-600 py-3 rounded-lg font-bold text-white">Q Hub সেভ করুন</button>
-                        <button onclick="resetCultureForm()" class="bg-gray-600 px-6 py-3 rounded-lg font-bold text-white">রিসেট</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Q DATA PAGE SECTION (Orders Sheet) -->
-        <section id="qdataSection" class="section">
-            <div class="max-w-6xl mx-auto">
-                <!-- Header -->
-                <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
-                    <div class="flex items-center gap-3">
-                        <button onclick="switchTab('admin')" class="text-brand-cyan hover:text-white w-9 h-9 flex items-center justify-center rounded-lg hover:bg-white/10 transition" title="ব্যাক">
-                            <i class="fas fa-arrow-left text-lg"></i>
-                        </button>
-                        <h2 class="text-2xl font-bold text-green-400 flex items-center gap-2"><i class="fas fa-table"></i> Q Data Page</h2>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <button onclick="exportQDataCSV()" class="bg-brand-purple/20 hover:bg-brand-purple/40 text-brand-purple border border-brand-purple/50 px-3 py-2 rounded-lg text-sm font-bold transition-all"><i class="fas fa-file-csv mr-1"></i> Export CSV</button>
-                        <button onclick="fetchQData()" class="bg-green-500/20 hover:bg-green-500/40 text-green-400 border border-green-500/50 px-3 py-2 rounded-lg text-sm font-bold transition-all"><i class="fas fa-sync-alt mr-1"></i> Refresh</button>
-                    </div>
-                </div>
-
-                <p class="text-gray-400 text-sm mb-4">কোনো কাস্টমার অর্ডার করার পর তার সকল তথ্য (তারিখ ও সময়, নাম, What'sApp নম্বর, ঠিকানা, মোট মূল্য, পরিমাণ, PI ও সেলার ID) এখানে শীট আকারে দেখা যাবে।</p>
-
-                <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                    <div class="glass p-4 rounded-xl border-l-4 border-green-500">
-                        <div class="text-xs text-gray-400">মোট অর্ডার</div>
-                        <div class="text-2xl font-bold text-white" id="qStatTotal">0</div>
-                    </div>
-                    <div class="glass p-4 rounded-xl border-l-4 border-brand-cyan">
-                        <div class="text-xs text-gray-400">মোট পণ্যের পরিমাণ</div>
-                        <div class="text-2xl font-bold text-white" id="qStatQty">0</div>
-                    </div>
-                    <div class="glass p-4 rounded-xl border-l-4 border-brand-pink">
-                        <div class="text-xs text-gray-400">মোট মূল্য (৳)</div>
-                        <div class="text-2xl font-bold text-white" id="qStatPrice">৳0</div>
-                    </div>
-                </div>
-
-                <!-- Search -->
-                <div class="relative mb-4">
-                    <input type="text" id="qDataSearch" oninput="renderQDataTable()" placeholder="নাম, নম্বর, ঠিকানা, PI বা সেলার ID দিয়ে খুঁজুন..." class="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-white focus:outline-none focus:border-green-500">
-                    <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
-                </div>
-
-                <!-- Sheet Table -->
-                <div class="glass rounded-2xl border-t-4 border-green-500 p-3 md:p-5 shadow-lg shadow-green-500/10">
-                    <div class="overflow-x-auto table-scroll pb-2">
-                        <table class="w-full text-left text-sm text-gray-300 border-collapse min-w-[1000px]">
-                            <thead class="bg-white/10 text-white font-bold">
-                                <tr>
-                                    <th class="p-3 border border-white/10 w-10">#</th>
-                                    <th class="p-3 border border-white/10">Date &amp; Time</th>
-                                    <th class="p-3 border border-white/10">Customer Name</th>
-                                    <th class="p-3 border border-white/10">What'sApp Number</th>
-                                    <th class="p-3 border border-white/10">Address</th>
-                                    <th class="p-3 border border-white/10">PI</th>
-                                    <th class="p-3 border border-white/10">Seller ID</th>
-                                    <th class="p-3 border border-white/10">Quantity</th>
-                                    <th class="p-3 border border-white/10">Total Price</th>
-                                </tr>
-                            </thead>
-                            <tbody id="qDataTableBody">
-                                <tr><td colspan="9" class="p-4 text-center text-gray-400">Loading data...</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Bottom Navigation (Shop বামে, Home মাঝে) -->
-    <nav class="bottom-nav">
-        <div class="nav-item" data-target="shop" onclick="switchTab('shop')">
-            <i class="fas fa-shopping-bag"></i><span>Shop</span>
-        </div>
-        <div class="nav-item active" data-target="home" onclick="switchTab('home')">
-            <i class="fas fa-home"></i><span>Home</span>
-        </div>
-        <div class="nav-item" data-target="sell" onclick="switchTab('sell')">
-            <i class="fas fa-store"></i><span>Sell</span>
-        </div>
-    </nav>
-
-    <script>
-        const supabaseUrl = 'https://wjpblozbopbvorpdzhuj.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndqcGJsb3pib3Bidm9ycGR6aHVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0OTU3NTYsImV4cCI6MjA5NDA3MTc1Nn0.WAQv30acFVSvZiC4-HNEsrzPaDUa5zZYE4rEZF1dltc';
-        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-
-        let products = [];
-        let cultures = [];
-        let qDataOrders = []; // Holds all fetched orders for Q Data page
+  <!-- Top Navigation Header -->
+  <header class="fixed top-0 left-0 w-full z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
         
-        let currentPriceLimit = Infinity;
-        let currentSearchQuery = '';
+        <!-- Brand Logo & Name -->
+        <div class="flex items-center gap-3 cursor-pointer" onclick="App.switchPanel('public', 'home')">
+          <img src="https://i.ibb.co/9kkZ5m6g/2847.png" alt="Q.hobby Logo" class="w-9 h-9 rounded-full ring-2 ring-cyan-500/50 shadow-lg shadow-cyan-500/20 object-cover">
+          <div>
+            <span class="text-xl sm:text-2xl font-bold tracking-wider text-white">Q.<span class="text-gradient-cyan">hobby</span></span>
+            <span class="hidden md:inline-block text-[11px] text-gray-400 ml-2 border-l border-white/20 pl-2">ডিজিটাল শৌখিন বাজার</span>
+          </div>
+        </div>
 
-        // Order System Variables
-        let currentOrderProduct = null;
-        let currentOrderType = 'Buy'; // 'Buy' or 'Gift'
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <button id="topNav_public_home" onclick="App.switchPanel('public', 'home')" class="top-nav-link text-gray-300 hover:text-cyan-400 transition py-1">হোম (Home)</button>
+          <button id="topNav_public_shop" onclick="App.switchPanel('public', 'shop')" class="top-nav-link text-gray-300 hover:text-cyan-400 transition py-1">শপ (Shop)</button>
+          <button id="topNav_public_sell" onclick="App.switchPanel('public', 'sell')" class="top-nav-link text-gray-300 hover:text-cyan-400 transition py-1">পণ্য বিক্রি করুন (Sell)</button>
+          <button id="topNav_public_complain" onclick="App.switchPanel('public', 'complain')" class="top-nav-link text-amber-400 hover:text-amber-300 transition py-1 flex items-center gap-1.5">
+            <i class="fas fa-headset"></i> অভিযোগ
+          </button>
+        </nav>
 
-        function notify(msg) {
-            const el = document.getElementById('notification');
-            el.innerText = msg;
-            el.classList.add('show');
-            setTimeout(() => el.classList.remove('show'), 3000);
-        }
+        <!-- Right Quick Action Badges -->
+        <div class="flex items-center gap-2.5">
+          <!-- Wishlist Badge -->
+          <button onclick="App.switchPanel('user')" class="relative p-2 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-pink-400 transition" title="উইশলিস্ট">
+            <i class="far fa-heart text-base"></i>
+            <span id="wishlistCountBadge" class="absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+          </button>
 
-        function switchTab(tabId) {
-            closeAdminMenu();
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+          <!-- User Panel Button -->
+          <button onclick="App.switchPanel('user')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-gray-200 transition">
+            <i class="fas fa-user-circle text-cyan-400 text-sm"></i>
+            <span id="userNavProfileLabel" class="hidden sm:inline">গ্রাহক একাউন্ট</span>
+          </button>
+
+          <!-- Admin Panel Button -->
+          <button onclick="App.switchPanel('admin')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-xs font-semibold text-purple-300 transition">
+            <i class="fas fa-shield-alt text-purple-400 text-sm"></i>
+            <span class="hidden sm:inline">এডমিন</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer for Fixed Header -->
+  <div class="h-16"></div>
+
+  <!-- MAIN APPLICATION CONTENT PANELS -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ==========================================================
+         PANEL 1: PUBLIC STORE FRONTEND (PUBLIC PANEL)
+         ========================================================== -->
+    <div id="panel_public" class="app-panel">
+
+      <!-- SUB-SECTION 1: HOME -->
+      <section id="publicSubSection_home" class="public-sub-section space-y-10">
+        
+        <!-- Hero Banner -->
+        <div class="glass-panel p-6 sm:p-12 rounded-3xl relative overflow-hidden border border-cyan-500/20">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-purple-500/10 blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-2xl">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-4">
+              <i class="fas fa-sparkles"></i> প্রিমিয়াম শৌখিন ই-কমার্স
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-4">
+              স্বাগতম <span class="text-gradient-brand">Q.hobby</span> তে
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+              ডিজিটাল দুনিয়ায় আপনার বিশ্বস্ত পার্টনার। সব ধরণের নান্দনিক, হস্তশিল্প ও শৌখিন পণ্য এখন এক ক্লিকেই সুলভ ও ন্যায্য মূল্যে সরাসরি আপনার দ্বারে।
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <button onclick="App.switchPanel('public', 'shop')" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 shadow-lg shadow-cyan-500/20 text-sm">
+                <i class="fas fa-shopping-bag"></i> শপ ভিজিট করুন
+              </button>
+              <button onclick="App.switchPanel('public', 'sell')" class="bg-white/10 hover:bg-white/15 text-white font-bold px-6 py-3 rounded-xl transition border border-white/10 text-sm">
+                <i class="fas fa-store mr-1"></i> পণ্য বিক্রি করুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Highlights -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0">
+              <i class="fas fa-truck-fast text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs sm:text-sm">দ্রুত ডেলিভারি</h4>
+              <p class="text-gray-400 text-[11px]">পাঠাও, স্টিডফাস্ট ও সুন্দরবন</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0">
+              <i class="fas fa-shield-halved text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs sm:text-sm">ন্যায্য মূল্য</h4>
+              <p class="text-gray-400 text-[11px]">১০০% বিশ্বস্ত সেলার পার্টনার্স</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center shrink-0">
+              <i class="fas fa-gift text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs sm:text-sm">উপহার সুবিধা</h4>
+              <p class="text-gray-400 text-[11px]">প্রিয়জনকে গিফট পাঠান সহজে</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
+              <i class="fab fa-whatsapp text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs sm:text-sm">WhatsApp অর্ডার</h4>
+              <p class="text-gray-400 text-[11px]">সরাসরি সেলারের সাথে কনফার্ম</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q Hub Updates (Culture Feed) -->
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-xs font-bold text-purple-400 uppercase tracking-wider block">কমিউনিটি ও নোটিশ</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">Q Hub Update</h2>
+            </div>
+          </div>
+          <div id="publicQHubFeed" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+        </div>
+
+        <!-- Featured Products Preview Section -->
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block">জনপ্রিয় সামগ্রী</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">আমাদের শপ (Shop)</h2>
+            </div>
+            <button onclick="App.switchPanel('public', 'shop')" class="text-xs text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1 transition">
+              সবগুলো দেখুন <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- We can reuse publicShopGrid in shop section -->
+        </div>
+
+      </section>
+
+      <!-- SUB-SECTION 2: SHOP CATALOG -->
+      <section id="publicSubSection_shop" class="public-sub-section hidden space-y-6">
+        <div>
+          <h2 class="text-2xl font-bold text-white border-l-4 border-cyan-400 pl-3 mb-1">আমাদের প্রোডাক্টস (Shop)</h2>
+          <p class="text-gray-400 text-xs">আপনার পছন্দের শৌখিন পণ্যটি বেছে নিন এবং সরাসরি WhatsApp এ অর্ডার করুন</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative">
+          <input type="text" id="shopSearchInput" oninput="PublicPanel.onSearch(this.value)" placeholder="পণ্যের নাম বা Product ID (PI) দিয়ে খুঁজুন..." class="w-full bg-white/5 border border-white/10 rounded-2xl pl-11 pr-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition">
+          <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none whitespace-nowrap">
+          <button onclick="PublicPanel.setCategory('all', this)" class="cat-pill bg-cyan-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-lg shrink-0 transition">সব ক্যাটাগরি</button>
+          <button onclick="PublicPanel.setCategory('হস্তশিল্প ও আর্ট', this)" class="cat-pill bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">হস্তশিল্প ও আর্ট</button>
+          <button onclick="PublicPanel.setCategory('হোম ডেকোর', this)" class="cat-pill bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">হোম ডেকোর</button>
+          <button onclick="PublicPanel.setCategory('শৌখিন সামগ্রী', this)" class="cat-pill bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">শৌখিন সামগ্রী</button>
+          <button onclick="PublicPanel.setCategory('উপহার সামগ্রী', this)" class="cat-pill bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">উপহার সামগ্রী</button>
+        </div>
+
+        <!-- Price Range Filter Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 whitespace-nowrap">
+          <span class="text-xs text-gray-400 mr-1 shrink-0"><i class="fas fa-sliders-h mr-1"></i>মূল্য সীমা:</span>
+          <button onclick="PublicPanel.setPriceLimit(Infinity, this)" class="price-pill bg-cyan-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition">সকল মূল্য</button>
+          <button onclick="PublicPanel.setPriceLimit(50, this)" class="price-pill bg-white/5 text-gray-300 hover:bg-white/10 px-3 py-1.5 rounded-lg text-xs border border-white/5 shrink-0 transition">৫০৳ মধ্যে</button>
+          <button onclick="PublicPanel.setPriceLimit(100, this)" class="price-pill bg-white/5 text-gray-300 hover:bg-white/10 px-3 py-1.5 rounded-lg text-xs border border-white/5 shrink-0 transition">১০০৳ মধ্যে</button>
+          <button onclick="PublicPanel.setPriceLimit(300, this)" class="price-pill bg-white/5 text-gray-300 hover:bg-white/10 px-3 py-1.5 rounded-lg text-xs border border-white/5 shrink-0 transition">৩০০৳ মধ্যে</button>
+          <button onclick="PublicPanel.setPriceLimit(500, this)" class="price-pill bg-white/5 text-gray-300 hover:bg-white/10 px-3 py-1.5 rounded-lg text-xs border border-white/5 shrink-0 transition">৫০০৳ মধ্যে</button>
+          <button onclick="PublicPanel.setPriceLimit(800, this)" class="price-pill bg-white/5 text-gray-300 hover:bg-white/10 px-3 py-1.5 rounded-lg text-xs border border-white/5 shrink-0 transition">৮০০৳ মধ্যে</button>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div id="publicShopGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-2"></div>
+      </section>
+
+      <!-- SUB-SECTION 3: SELL (আপনার পণ্য বিক্রি করুন) -->
+      <section id="publicSubSection_sell" class="public-sub-section hidden max-w-2xl mx-auto space-y-6">
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-pink-500/20">
+          <div class="text-center mb-6">
+            <span class="w-12 h-12 rounded-2xl bg-pink-500/15 text-pink-400 flex items-center justify-center mx-auto mb-3 text-xl">
+              <i class="fas fa-store"></i>
+            </span>
+            <h2 class="text-2xl font-bold text-white">আপনার পণ্য বিক্রি করুন</h2>
+            <p class="text-gray-400 text-xs sm:text-sm mt-1">Q.hobby প্ল্যাটফর্মে আপনার শৌখিন বা হস্তশিল্প পণ্য যুক্ত করুন</p>
+          </div>
+
+          <form id="sellForm" onsubmit="event.preventDefault(); PublicPanel.submitVendorForm();" class="space-y-4">
+            <div>
+              <label class="block text-xs text-gray-300 mb-1">পণ্যের নাম <span class="text-red-400">*</span></label>
+              <input type="text" id="sellProdName" required placeholder="পণ্যের নাম লিখুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 text-sm">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">পণ্যের প্রত্যাশিত মূল্য (৳) <span class="text-red-400">*</span></label>
+                <input type="number" id="sellProdPrice" required placeholder="মূল্য নির্ধারণ করুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 text-sm">
+              </div>
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">আপনার WhatsApp নম্বর <span class="text-red-400">*</span></label>
+                <input type="tel" id="sellProdPhone" required placeholder="01XXXXXXXXX" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs text-gray-300 mb-1">পণ্যের বিবরণ ও অন্যান্য তথ্য</label>
+              <textarea id="sellProdOther" rows="3" placeholder="পণ্যের ম্যাটেরিয়াল, সাইজ বা প্রয়োজনীয় তথ্য..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-pink-500 text-sm"></textarea>
+            </div>
+
+            <div class="p-3 bg-pink-500/10 rounded-xl border border-pink-500/20 text-xs text-pink-300 text-center font-medium">
+              <i class="fab fa-whatsapp mr-1"></i> সাবমিট করার পর পণ্যটির ছবি অবশ্যই WhatsApp এ পাঠাতে হবে।
+            </div>
+
+            <!-- Seller Terms -->
+            <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-xs text-gray-300 space-y-2 leading-relaxed">
+              <h4 class="font-bold text-white mb-1">বিক্রেতা শর্তাবলী :</h4>
+              <p>১. পণ্যের সঠিক তথ্য এবং নিজস্ব মোবাইল নম্বর প্রদান করুন;</p>
+              <p>২. পাঠাও, স্টিডফাস্ট বা সুন্দরবন কুরিয়ার সার্ভিসের মাধ্যমে ডেলিভারি সম্পন্ন করতে হবে;</p>
+              <p>৩. স্টক শেষ হলে কর্তৃপক্ষকে তাৎক্ষণিক জানাতে হবে;</p>
+              <p>৪. Q.hobby একটি অনলাইন প্ল্যাটফর্ম হিসেবে পণ্য উপস্থাপন করে, ডেলিভারি সংশ্লিষ্ট বিষয় আপনার একার।</p>
+            </div>
+
+            <label class="flex items-start gap-2.5 bg-white/5 p-3 rounded-xl border border-pink-500/30 cursor-pointer">
+              <input type="checkbox" id="sellAgreeTerms" required class="mt-0.5 w-4 h-4 accent-pink-500 rounded">
+              <span class="text-xs text-gray-200">আমি উপরোক্ত সকল বিক্রেতা শর্তাবলী সজ্ঞানে পড়েছি, বুঝেছি এবং মেনে নিয়ে সম্মতি প্রদান করছি।</span>
+            </label>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-pink-500/20 text-sm">
+              <i class="fab fa-whatsapp text-lg"></i> WhatsApp এ রিকোয়েস্ট পাঠান
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SUB-SECTION 4: COMPLAIN (অভিযোগ পাঠান) -->
+      <section id="publicSubSection_complain" class="public-sub-section hidden max-w-lg mx-auto space-y-6">
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-amber-500/20">
+          <div class="text-center mb-6">
+            <span class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mx-auto mb-3 text-xl">
+              <i class="fas fa-headset"></i>
+            </span>
+            <h2 class="text-2xl font-bold text-white">অভিযোগ পাঠান</h2>
+            <p class="text-gray-400 text-xs mt-1">যেকোনো সেলার বা ডেলিভারি সংক্রান্ত অভিযোগ সরাসরি অ্যাডমিনকে জানান</p>
+          </div>
+
+          <form id="complainForm" onsubmit="event.preventDefault(); PublicPanel.submitComplaintForm();" class="space-y-4">
+            <div>
+              <label class="block text-xs text-gray-300 mb-1">সেলার ID (Seller ID) <span class="text-red-400">*</span></label>
+              <input type="text" id="complainSellerId" required placeholder="সেলার ID লিখুন (যেমন: SL-1001)" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs text-gray-300 mb-1">অভিযোগের বর্ণনা <span class="text-red-400">*</span></label>
+              <textarea id="complainDetails" required rows="4" placeholder="আপনার সমস্যাটি বিস্তারিত লিখুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-amber-400 text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 text-sm">
+              <i class="fas fa-paper-plane"></i> Submit Complain
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================================
+         PANEL 2: USER PANEL (CUSTOMER ACCOUNT & ORDER TRACKING)
+         ========================================================== -->
+    <div id="panel_user" class="app-panel hidden space-y-8 max-w-4xl mx-auto">
+      
+      <!-- User Login Box (when not logged in) -->
+      <div id="userAuthBox" class="glass-panel p-6 sm:p-8 rounded-3xl max-w-md mx-auto text-center border border-cyan-500/30">
+        <span class="w-14 h-14 rounded-2xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+          <i class="fas fa-user-circle"></i>
+        </span>
+        <h2 class="text-2xl font-bold text-white mb-1">গ্রাহক একাউন্ট লগইন</h2>
+        <p class="text-gray-400 text-xs mb-6">আপনার মোবাইল নম্বর দিয়ে সহজেই অর্ডারসমূহ ট্র্যাক ও পরিচালনা করুন</p>
+
+        <div class="space-y-3.5 text-left">
+          <div>
+            <label class="block text-xs text-gray-300 mb-1">মোবাইল নম্বর <span class="text-red-400">*</span></label>
+            <input type="tel" id="userLoginPhone" placeholder="01XXXXXXXXX" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-300 mb-1">আপনার নাম (ঐচ্ছিক)</label>
+            <input type="text" id="userLoginName" placeholder="নাম লিখুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+          </div>
+          <button onclick="UserPanel.login(document.getElementById('userLoginPhone').value, document.getElementById('userLoginName').value)" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 rounded-xl transition text-sm shadow-lg shadow-cyan-500/20">
+            একাউন্টে প্রবেশ করুন
+          </button>
+        </div>
+      </div>
+
+      <!-- User Dashboard (when logged in) -->
+      <div id="userDashboard" class="hidden space-y-6">
+        
+        <!-- Header & Profile Card -->
+        <div class="glass-panel p-6 rounded-3xl border border-cyan-500/20 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-cyan-500/20">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h3 id="userDisplayName" class="text-xl font-bold text-white">গ্রাহক</h3>
+              <p id="userDisplayPhone" class="text-xs text-cyan-400 font-mono">01XXXXXXXXX</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="UserPanel.logout()" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-semibold text-gray-300 hover:text-red-400 transition">
+              <i class="fas fa-sign-out-alt mr-1"></i> লগআউট
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI Stats for User -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="glass-card p-4 rounded-2xl border border-cyan-500/20">
+            <span class="text-xs text-gray-400 block mb-1">আমার মোট অর্ডার</span>
+            <span id="userStatOrderCount" class="text-2xl font-bold text-white">0</span>
+          </div>
+          <div class="glass-card p-4 rounded-2xl border border-pink-500/20">
+            <span class="text-xs text-gray-400 block mb-1">উইশলিস্ট পণ্য</span>
+            <span id="userStatWishCount" class="text-2xl font-bold text-pink-400">0</span>
+          </div>
+        </div>
+
+        <!-- Quick Order Search & Track -->
+        <div class="glass-card p-4 rounded-2xl border border-white/10">
+          <span class="text-xs font-bold text-cyan-400 mb-2 block"><i class="fas fa-search-location mr-1"></i> ইনস্ট্যান্ট অর্ডার ট্র্যাকিং</span>
+          <div class="flex gap-2">
+            <input type="text" id="orderTrackInput" placeholder="Order ID বা মোবাইল নম্বর দিন..." class="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-cyan-400">
+            <button onclick="UserPanel.trackOrderByQuery()" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition">ট্র্যাক করুন</button>
+          </div>
+          <div id="orderTrackResult"></div>
+        </div>
+
+        <!-- My Orders List -->
+        <div>
+          <h3 class="text-lg font-bold text-white mb-3 border-l-4 border-cyan-400 pl-3">আমার অর্ডারসমূহ (Order History)</h3>
+          <div id="userOrdersList" class="space-y-3"></div>
+        </div>
+
+        <!-- My Wishlist -->
+        <div>
+          <h3 class="text-lg font-bold text-white mb-3 border-l-4 border-pink-500 pl-3">উইশলিস্ট ও প্রিয় পণ্য</h3>
+          <div id="userWishlistItems" class="space-y-2.5"></div>
+        </div>
+
+        <!-- Saved Address Settings -->
+        <div class="glass-card p-5 rounded-2xl border border-white/10">
+          <h4 class="font-bold text-white text-sm mb-3"><i class="fas fa-map-marker-alt text-cyan-400 mr-1.5"></i> ডিফল্ট ডেলিভারি তথ্য সংরক্ষণ</h4>
+          <div class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs text-gray-400 mb-1">পূর্ণ নাম</label>
+                <input type="text" id="userProfileName" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+              </div>
+              <div>
+                <label class="block text-xs text-gray-400 mb-1">মোবাইল নম্বর</label>
+                <input type="tel" id="userProfilePhone" readonly class="w-full bg-white/10 border border-white/5 rounded-xl px-3 py-2 text-gray-400 text-xs cursor-not-allowed">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">ডেলিভারি ঠিকানা</label>
+              <textarea id="userProfileAddress" rows="2" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs"></textarea>
+            </div>
+            <button onclick="UserPanel.saveProfile()" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition">
+              তথ্য সেভ করুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ==========================================================
+         PANEL 3: ADMIN PANEL (FULL CONTROLLER & GITHUB DATABASE)
+         ========================================================== -->
+    <div id="panel_admin" class="app-panel hidden space-y-8 max-w-6xl mx-auto">
+      
+      <!-- Admin Login Box -->
+      <div id="adminLoginBox" class="glass-panel p-6 sm:p-8 rounded-3xl max-w-md mx-auto text-center border border-purple-500/30">
+        <span class="w-14 h-14 rounded-2xl bg-purple-500/15 text-purple-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+          <i class="fas fa-user-shield"></i>
+        </span>
+        <h2 class="text-2xl font-bold text-white mb-1">এডমিন কন্ট্রোল প্যানেল</h2>
+        <p class="text-gray-400 text-xs mb-6">নিরাপদ ব্যবস্থাপনার জন্য এডমিন পাসওয়ার্ড প্রবেশ করান</p>
+
+        <div class="space-y-4 text-left">
+          <div>
+            <label class="block text-xs text-gray-300 mb-1">এডমিন পাসওয়ার্ড <span class="text-red-400">*</span></label>
+            <input type="password" id="adminPasswordInput" placeholder="পাসওয়ার্ড লিখুন (Default: admin123)" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 text-sm">
+          </div>
+          <button onclick="AdminPanel.login(document.getElementById('adminPasswordInput').value)" class="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-3.5 rounded-xl transition text-sm shadow-lg shadow-purple-500/20">
+            এডমিন ড্যাশবোর্ডে প্রবেশ করুন
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Executive Dashboard -->
+      <div id="adminDashboard" class="hidden space-y-6">
+
+        <!-- Top Header & Tabs -->
+        <div class="glass-panel p-4 sm:p-6 rounded-3xl border border-purple-500/20 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+              <i class="fas fa-shield-alt text-purple-400"></i> এডমিন ড্যাশবোর্ড
+            </h2>
+            <p class="text-gray-400 text-xs mt-0.5">Q.hobby সার্বিক কার্যক্রম ও ডাটাবেস পরিচালনা</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="AdminPanel.logout()" class="px-3 py-1.5 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-300 text-xs font-bold border border-red-500/30 transition">
+              <i class="fas fa-sign-out-alt mr-1"></i> লগআউট
+            </button>
+          </div>
+        </div>
+
+        <!-- Sub Tabs Navigation -->
+        <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none whitespace-nowrap">
+          <button id="adminTabBtn_overview" onclick="AdminPanel.switchTab('overview')" class="admin-tab-btn bg-cyan-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-lg shrink-0 transition">
+            <i class="fas fa-chart-line mr-1.5"></i> ওভারভিউ (Overview)
+          </button>
+          <button id="adminTabBtn_products" onclick="AdminPanel.switchTab('products')" class="admin-tab-btn bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">
+            <i class="fas fa-boxes mr-1.5"></i> প্রোডাক্ট ম্যানেজার
+          </button>
+          <button id="adminTabBtn_orders" onclick="AdminPanel.switchTab('orders')" class="admin-tab-btn bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">
+            <i class="fas fa-table mr-1.5"></i> Q Data (অর্ডার শীট)
+          </button>
+          <button id="adminTabBtn_culture" onclick="AdminPanel.switchTab('culture')" class="admin-tab-btn bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">
+            <i class="fas fa-bullhorn mr-1.5"></i> Q Hub (Culture)
+          </button>
+          <button id="adminTabBtn_complaints" onclick="AdminPanel.switchTab('complaints')" class="admin-tab-btn bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">
+            <i class="fas fa-exclamation-triangle mr-1.5"></i> অভিযোগ বক্স
+          </button>
+          <button id="adminTabBtn_github" onclick="AdminPanel.switchTab('github')" class="admin-tab-btn bg-white/5 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10 shrink-0 transition">
+            <i class="fab fa-github mr-1.5 text-cyan-400"></i> গিটহাব ডাটাবেস সিঙ্ক
+          </button>
+        </div>
+
+        <!-- 1. OVERVIEW SUB-SECTION -->
+        <div id="adminSubSection_overview" class="admin-sub-section space-y-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-cyan-400">
+              <span class="text-xs text-gray-400 block">মোট প্রোডাক্ট</span>
+              <span id="adminKpiProducts" class="text-2xl font-bold text-white">0</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-emerald-400">
+              <span class="text-xs text-gray-400 block">মোট অর্ডার</span>
+              <span id="adminKpiOrders" class="text-2xl font-bold text-emerald-400">0</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-amber-400">
+              <span class="text-xs text-gray-400 block">মোট বিক্রয় মূল্য</span>
+              <span id="adminKpiRevenue" class="text-2xl font-bold text-amber-400">৳0</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-pink-400">
+              <span class="text-xs text-gray-400 block">পেন্ডিং অর্ডার</span>
+              <span id="adminKpiPending" class="text-2xl font-bold text-pink-400">0</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-purple-400">
+              <span class="text-xs text-gray-400 block">Q Hub পোস্ট</span>
+              <span id="adminKpiCulture" class="text-2xl font-bold text-purple-400">0</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-red-400">
+              <span class="text-xs text-gray-400 block">অভিযোগ সংখ্যা</span>
+              <span id="adminKpiComplaints" class="text-2xl font-bold text-red-400">0</span>
+            </div>
+          </div>
+
+          <!-- Recent Orders Mini Box -->
+          <div class="glass-card p-5 rounded-2xl border border-white/10">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-white text-sm"><i class="fas fa-clock mr-1 text-cyan-400"></i> সাম্প্রতিক অর্ডারসমূহ</h3>
+              <button onclick="AdminPanel.switchTab('orders')" class="text-xs text-cyan-400 hover:text-cyan-300">সবগুলো দেখুন</button>
+            </div>
+            <div id="adminRecentOrdersMini" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- 2. PRODUCTS SUB-SECTION -->
+        <div id="adminSubSection_products" class="admin-sub-section hidden space-y-6">
+          
+          <!-- Product Add/Edit Form Container -->
+          <div id="adminProdFormContainer" class="glass-panel p-6 rounded-3xl border border-cyan-500/20">
+            <h3 id="adminProdFormTitle" class="text-lg font-bold text-white mb-4 border-l-4 border-cyan-400 pl-3">নতুন প্রোডাক্ট যুক্ত করুন</h3>
             
-            const targetSec = document.getElementById(tabId + 'Section');
-            if(targetSec) targetSec.classList.add('active');
-            
-            const navItem = document.querySelector(`.nav-item[data-target="${tabId}"]`);
-            if(navItem) navItem.classList.add('active');
+            <form id="adminProductForm" onsubmit="event.preventDefault(); AdminPanel.saveProductFromForm();" class="space-y-4">
+              <input type="hidden" id="adminProdId">
 
-            if(tabId === 'home' || tabId === 'shop' || tabId === 'admin') fetchData();
-            if(tabId === 'qdata') fetchQData();
-            
-            // Fixed bottom bar only for product detail
-            if(tabId === 'productDetail') {
-                document.getElementById('fixedActionBar').classList.remove('hidden');
-                document.getElementById('fixedActionBar').classList.add('block');
-            } else {
-                document.getElementById('fixedActionBar').classList.add('hidden');
-                document.getElementById('fixedActionBar').classList.remove('block');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // ---------------- THREE DOT MENU LOGIC ----------------
-        function toggleAdminMenu(e) {
-            if(e) e.stopPropagation();
-            const menu = document.getElementById('adminDropdownMenu');
-            menu.classList.toggle('show');
-        }
-        function closeAdminMenu() {
-            const menu = document.getElementById('adminDropdownMenu');
-            if(menu) menu.classList.remove('show');
-        }
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            const menu = document.getElementById('adminDropdownMenu');
-            if(menu && menu.classList.contains('show') && !e.target.closest('#adminDropdownMenu') && !e.target.closest('button[onclick^="toggleAdminMenu"]')) {
-                menu.classList.remove('show');
-            }
-        });
-
-        function openQDataPage() {
-            closeAdminMenu();
-            switchTab('qdata');
-        }
-
-        async function fetchData() {
-            try {
-                const { data: prodData, error: prodErr } = await supabaseClient.from('products').select('*').order('id', { ascending: false });
-                if(prodErr) console.error("Products Fetch Error:", prodErr);
-                if(prodData) {
-                    products = prodData;
-                    renderShopItems();
-                }
-                
-                const { data: cultData, error: cultErr } = await supabaseClient.from('culture').select('*').order('id', { ascending: false });
-                if(cultErr) console.error("Culture Fetch Error:", cultErr);
-                if(cultData) cultures = cultData;
-
-                renderUI();
-                if(document.getElementById('adminDashboard').style.display === 'block') {
-                    searchAdminData();
-                }
-            } catch(e) { console.error("Fetch Exception:", e); }
-        }
-
-        function filterPrice(limit, btnElement) {
-            currentPriceLimit = limit;
-            document.querySelectorAll('.price-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-cyan', 'text-white');
-                btn.classList.add('bg-white/10', 'text-gray-300');
-            });
-            btnElement.classList.remove('bg-white/10', 'text-gray-300');
-            btnElement.classList.add('bg-brand-cyan', 'text-white');
-            renderShopItems();
-        }
-
-        function filterSearch() {
-            currentSearchQuery = document.getElementById('shopSearch').value.toLowerCase();
-            renderShopItems();
-        }
-
-        function renderShopItems() {
-            const shopGrid = document.getElementById('shopGrid');
-            if(!shopGrid) return;
-            
-            const filteredProducts = products.filter(p => {
-                const matchesPrice = (p.price || 0) <= currentPriceLimit;
-                const matchesSearch = p.name.toLowerCase().includes(currentSearchQuery) || (p.pi && p.pi.toLowerCase().includes(currentSearchQuery));
-                return matchesPrice && matchesSearch;
-            });
-
-            if(filteredProducts.length === 0) {
-                shopGrid.innerHTML = `<p class="text-gray-400 col-span-2 md:col-span-4 text-center py-10">কোন প্রোডাক্ট পাওয়া যায়নি।</p>`;
-            } else {
-                shopGrid.innerHTML = filteredProducts.map(p => `
-                    <div class="q-card flex flex-col" onclick="showProductDetail(${p.id})">
-                        <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-full h-32 md:h-48 object-cover">
-                        <div class="p-4 flex-1 flex flex-col">
-                            <h3 class="font-bold text-white mb-1 text-sm md:text-base">${p.name}</h3>
-                            <p class="text-xs text-gray-400 mb-2">PI: ${p.pi || 'N/A'}</p>
-                            <div class="text-brand-cyan font-bold mb-3 flex-1">৳${p.price}</div>
-                            <button class="w-full text-center bg-brand-purple hover:bg-purple-600 text-white py-2 rounded-lg text-sm font-bold transition">View Details</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        }
-
-        function renderUI() {
-            renderShopItems();
-            const homeFeed = document.getElementById('homeFeed');
-            if(homeFeed) {
-                if(cultures.length === 0) {
-                    homeFeed.innerHTML = `<p class="text-gray-400 text-center col-span-1 md:col-span-2">কোন আপডেট পাওয়া যায়নি।</p>`;
-                } else {
-                    homeFeed.innerHTML = cultures.map(c => `
-                        <div class="glass rounded-xl overflow-hidden mb-4 p-5 border border-brand-purple/30">
-                            <h4 class="font-bold text-white mb-2 text-xl">${c.title}</h4>
-                            <p class="text-gray-300 text-sm mb-4 leading-relaxed">${c.description || ''}</p>
-                            ${c.image ? `<img src="${c.image}" class="w-full rounded-lg object-cover max-h-80 mt-2">` : ''}
-                        </div>
-                    `).join('');
-                }
-            }
-        }
-
-        function openOrderForm(id, type) {
-            const p = products.find(x => x.id === id);
-            if(!p) return;
-            currentOrderProduct = p;
-            currentOrderType = type;
-            
-            document.getElementById('orderTitle').innerText = type === 'Gift' ? 'উপহার (Gift) অর্ডার ফর্ম' : 'অর্ডার ফর্ম';
-            document.getElementById('orderForm').reset();
-            document.getElementById('oQuantity').value = 1;
-            updateOrderPrice();
-            
-            document.getElementById('orderFormContainer').classList.remove('hidden');
-            document.getElementById('termsContainer').classList.add('hidden');
-            document.getElementById('oAgree').checked = false;
-            
-            switchTab('order');
-        }
-
-        function updateOrderPrice() {
-            if(!currentOrderProduct) return;
-            const qty = parseInt(document.getElementById('oQuantity').value) || 1;
-            document.getElementById('oPrice').value = `৳${currentOrderProduct.price * qty} (+ ডেলিভারি চার্জ)`;
-        }
-
-        function proceedToTerms() {
-            const name = document.getElementById('oName').value.trim();
-            const phone = document.getElementById('oPhone').value.trim();
-            const address = document.getElementById('oAddress').value.trim();
-            const qty = document.getElementById('oQuantity').value;
-
-            if(!name || !phone || !address || !qty) {
-                notify("দয়া করে নাম, মোবাইল নম্বর এবং ঠিকানা সঠিকভাবে দিন!");
-                return;
-            }
-
-            document.getElementById('orderFormContainer').classList.add('hidden');
-            document.getElementById('termsContainer').classList.remove('hidden');
-        }
-
-        function goBackToForm() {
-            document.getElementById('termsContainer').classList.add('hidden');
-            document.getElementById('orderFormContainer').classList.remove('hidden');
-        }
-
-        // ---------- ORDER SAVING TO Q-DATA + WHATSAPP -----------
-        async function submitFinalOrder() {
-            if(!document.getElementById('oAgree').checked) {
-                notify("অর্ডার করতে শর্তাবলীতে সম্মতি প্রদান করুন!");
-                return;
-            }
-
-            const p = currentOrderProduct;
-            const name = document.getElementById('oName').value;
-            const phone = document.getElementById('oPhone').value;
-            const altPhone = document.getElementById('oAltPhone').value;
-            const address = document.getElementById('oAddress').value;
-            const qty = document.getElementById('oQuantity').value;
-            const total = p.price * qty;
-
-            // 1. SAVE TO DATABASE (Q-Data / orders table) - PI ও Seller ID সহ
-            const orderDataToSave = {
-                customer_name: name,
-                customer_phone: phone,
-                customer_alt_phone: altPhone,
-                customer_address: address,
-                product_name: p.name,
-                quantity: qty,
-                total_price: total,
-                seller_name: p.sellerName || 'N/A',
-                seller_phone: p.sellerPhone || 'N/A',
-                seller_id: p.sellerId || 'N/A',
-                pi: p.pi || 'N/A',
-                order_type: currentOrderType,
-                created_at: new Date().toISOString()
-            };
-
-            // Background insert
-            supabaseClient.from('orders').insert([orderDataToSave]).then(({ error }) => {
-                if(error) console.error("Error saving Q Data Order: ", error);
-            });
-
-            // 2. WHATSAPP MESSAGE PREPARATION
-            let msg = `*🛒 নতুন ${currentOrderType} অর্ডার*\n\n`;
-            msg += `*পণ্যের নাম:* ${p.name}\n`;
-            if(p.pi) msg += `*Product ID (PI):* ${p.pi}\n`;
-            if(p.sellerId) msg += `*Seller ID:* ${p.sellerId}\n`;
-            msg += `*পণ্যের ছবি:* ${p.image || 'N/A'}\n\n`;
-            
-            msg += `*👤 গ্রাহকের তথ্য:*\n`;
-            msg += `*নাম:* ${name}\n`;
-            msg += `*WhatsApp:* ${phone}\n`;
-            if(altPhone) msg += `*অতিরিক্ত নম্বর:* ${altPhone}\n`;
-            msg += `*ঠিকানা:* ${address}\n\n`;
-            
-            msg += `*📦 অর্ডার সামারি:*\n`;
-            msg += `*পরিমাণ:* ${qty} টি\n`;
-            msg += `*মোট মূল্য:* ৳${total} (+ ডেলিভারি চার্জ)\n`;
-            msg += `\n_✅ আমি শর্তাবলী মেনে অর্ডারটি প্লেস করেছি।_`;
-
-            let waPhone = p.sellerPhone;
-            if(!waPhone) waPhone = '01920037889';
-            if(waPhone.startsWith('0')) waPhone = '88' + waPhone;
-            else if(!waPhone.startsWith('88') && waPhone.startsWith('1')) waPhone = '880' + waPhone;
-
-            const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
-            
-            window.open(waUrl, '_blank');
-            notify("WhatsApp এ পাঠানো হচ্ছে...");
-            
-            setTimeout(() => switchTab('home'), 1000);
-        }
-
-        function submitComplain() {
-            const sId = document.getElementById('cSellerId').value.trim();
-            const desc = document.getElementById('cDescDetails').value.trim();
-
-            if(!sId || !desc) {
-                notify("দয়া করে সেলার ID এবং অভিযোগের বর্ণনা দিন!");
-                return;
-            }
-
-            let msg = `*🚨 নতুন অভিযোগ (Q.hobby)*\n\n`;
-            msg += `*সেলার ID:* ${sId}\n`;
-            msg += `*অভিযোগের বর্ণনা:* ${desc}\n`;
-
-            const adminWaPhone = '8801920037889';
-            const waUrl = `https://wa.me/${adminWaPhone}?text=${encodeURIComponent(msg)}`;
-            
-            window.open(waUrl, '_blank');
-            notify("অভিযোগ WhatsApp এ পাঠানো হচ্ছে...");
-            
-            document.getElementById('complainForm').reset();
-            setTimeout(() => switchTab('home'), 1000);
-        }
-
-        // Updated Sell Section Logic
-        function showSellTerms() {
-            const name = document.getElementById('sName').value;
-            const price = document.getElementById('sPrice').value;
-            const phone = document.getElementById('sPhone').value;
-            
-            if(!name || !price || !phone) {
-                notify("দয়া করে পণ্যের নাম, মূল্য এবং মোবাইল নম্বর প্রদান করুন!");
-                return;
-            }
-
-            document.getElementById('sellFormContainer').classList.add('hidden');
-            document.getElementById('sellTermsContainer').classList.remove('hidden');
-        }
-
-        function hideSellTerms() {
-            document.getElementById('sellTermsContainer').classList.add('hidden');
-            document.getElementById('sellFormContainer').classList.remove('hidden');
-        }
-
-        function submitFinalSell() {
-            if(!document.getElementById('sAgree').checked) {
-                notify("পণ্য বিক্রি করতে শর্তাবলীতে সম্মতি প্রদান করুন!");
-                return;
-            }
-
-            const name = document.getElementById('sName').value;
-            const price = document.getElementById('sPrice').value;
-            const phone = document.getElementById('sPhone').value;
-            const other = document.getElementById('sOther').value;
-
-            let textMessage = `*🛍️ নতুন পণ্য বিক্রির অনুরোধ*\n\n`;
-            textMessage += `*পণ্যের নাম:* ${name}\n`;
-            textMessage += `*পণ্যের মূল্য:* ৳${price}\n`;
-            textMessage += `*মোবাইল নম্বর:* ${phone}\n`;
-            if(other) textMessage += `*অন্যান্য তথ্য:* ${other}\n\n`;
-            textMessage += `_পণ্যটির ছবি নিচে পাঠানো হলো..._\n\n`;
-            textMessage += `_✅ আমি শর্তাবলী মেনে পণ্যটি বিক্রির জন্য সাবমিট করেছি।_`;
-
-            const waUrl = `https://wa.me/8801920037889?text=${encodeURIComponent(textMessage)}`;
-            window.open(waUrl, '_blank');
-            notify("WhatsApp এ পাঠানো হচ্ছে...");
-            
-            document.getElementById('sellForm').reset();
-            hideSellTerms();
-            document.getElementById('sAgree').checked = false;
-            setTimeout(() => switchTab('home'), 1000);
-        }
-
-        function showProductDetail(id) {
-            const p = products.find(x => x.id === id);
-            if(!p) return;
-            
-            let stockColor = p.stock === 'Out of Stock' ? 'text-red-500' : 'text-green-500';
-            
-            let deliveryLogos = '';
-            if(p.dPathao) deliveryLogos += `<span class="bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-semibold border border-gray-600">Pathao</span>`;
-            if(p.dSteadfast) deliveryLogos += `<span class="bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-semibold border border-gray-600">Steadfast</span>`;
-            if(p.dSundarban) deliveryLogos += `<span class="bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-semibold border border-gray-600">Sundarban</span>`;
-
-            const otherProducts = products.filter(x => x.id !== p.id).slice(0, 4);
-            let otherProductsHTML = '';
-            if(otherProducts.length > 0) {
-                otherProductsHTML = `
-                    <div class="mt-12 border-t border-white/10 pt-6">
-                        <h3 class="text-xl font-bold mb-4 border-l-4 border-brand-purple pl-3">অন্যান্য প্রোডাক্টস</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            ${otherProducts.map(op => `
-                                <div class="q-card flex flex-col" onclick="showProductDetail(${op.id})">
-                                    <img src="${op.image || 'https://via.placeholder.com/150'}" class="w-full h-24 md:h-32 object-cover">
-                                    <div class="p-3 flex-1 flex flex-col">
-                                        <h4 class="font-bold text-white text-xs md:text-sm mb-1">${op.name}</h4>
-                                        <div class="text-brand-cyan font-bold text-sm flex-1">৳${op.price}</div>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-
-            const detailHTML = `
-                <div class="glass rounded-2xl overflow-hidden mb-8">
-                    <img src="${p.image || 'https://via.placeholder.com/400'}" class="w-full object-cover max-h-96">
-                    <div class="p-6">
-                        <div class="mb-6">
-                            <h2 class="text-2xl font-bold text-white">${p.name}</h2>
-                            <p class="text-brand-cyan text-xl font-bold mt-1">৳${p.price} <span class="text-sm text-gray-400 ml-2">PI: ${p.pi || 'N/A'}</span></p>
-                        </div>
-                        <div class="mb-6 text-gray-300 text-sm leading-relaxed">${p.desc || 'No description available.'}</div>
-                        <div class="info-box">
-                            <div class="text-xs text-gray-400 mb-1"><i class="fas fa-id-badge mr-1"></i> Seller ID</div>
-                            <div class="text-sm font-bold text-brand-purple">${p.sellerId || 'N/A'}</div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3 mb-3">
-                            <div class="info-box !mb-0">
-                                <div class="text-xs text-gray-400 mb-1"><i class="fas fa-star text-yellow-500 mr-1"></i> Rating</div>
-                                <div class="text-sm font-bold text-yellow-500">${p.rating || 'N/A'} <i class="fas fa-star text-xs"></i></div>
-                            </div>
-                            <div class="info-box !mb-0">
-                                <div class="text-xs text-gray-400 mb-1"><i class="fas fa-box mr-1"></i> Stock Status</div>
-                                <div class="text-sm font-bold ${stockColor}">${p.stock || 'In Stock'}</div>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <div class="text-xs text-gray-400 mb-1"><i class="fas fa-ticket-alt text-green-400 mr-1"></i> Collect Coupon</div>
-                            <div class="text-sm text-gray-200">${p.coupon || 'No coupons available.'}</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="text-xs text-gray-400 mb-2"><i class="fas fa-truck text-blue-400 mr-1"></i> Delivery System</div>
-                            <div class="flex items-center flex-wrap gap-2">${deliveryLogos || '<span class="text-sm text-gray-400">N/A</span>'}</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="text-xs text-gray-400 mb-1"><i class="fas fa-undo text-red-400 mr-1"></i> Return Policy</div>
-                            <div class="text-sm text-gray-200">${p.returnPolicy || '7 Days Return Policy.'}</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="text-xs text-gray-400 mb-1"><i class="fas fa-comments text-brand-cyan mr-1"></i> Reviews</div>
-                            <div class="text-sm text-gray-200">${p.review || 'No reviews yet.'}</div>
-                        </div>
-                        <div class="mt-6 p-4 bg-black/30 rounded-xl flex items-center gap-4 border border-brand-purple/30">
-                            <img src="${p.sellerImg || 'https://via.placeholder.com/50'}" class="w-14 h-14 rounded-full object-cover border-2 border-brand-purple">
-                            <div>
-                                <h4 class="font-bold text-white">${p.sellerName || 'Verified Seller'}</h4>
-                                <p class="text-xs text-gray-400">Q.hobby Trusted Partner</p>
-                            </div>
-                        </div>
-                        ${otherProductsHTML}
-                    </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="sm:col-span-2">
+                  <label class="block text-xs text-gray-300 mb-1">পণ্যের নাম <span class="text-red-400">*</span></label>
+                  <input type="text" id="adminProdName" required placeholder="পণ্যের পুরো নাম" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
                 </div>
-            `;
-            
-            document.getElementById('productDetailContent').innerHTML = detailHTML;
-            
-            const buyBtn = document.getElementById('stickyBuyBtn');
-            const giftBtn = document.getElementById('stickyGiftBtn');
-            
-            buyBtn.onclick = (e) => { e.preventDefault(); openOrderForm(p.id, 'Buy'); };
-            giftBtn.onclick = (e) => { e.preventDefault(); openOrderForm(p.id, 'Gift'); };
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">মূল্য (৳) <span class="text-red-400">*</span></label>
+                  <input type="number" id="adminProdPrice" required placeholder="মূল্য" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+              </div>
 
-            switchTab('productDetail');
-        }
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">ক্যাটাগরি</label>
+                  <select id="adminProdCategory" class="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                    <option value="হস্তশিল্প ও আর্ট">হস্তশিল্প ও আর্ট</option>
+                    <option value="হোম ডেকোর">হোম ডেকোর</option>
+                    <option value="শৌখিন সামগ্রী">শৌখিন সামগ্রী</option>
+                    <option value="উপহার সামগ্রী">উপহার সামগ্রী</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">Product ID (PI)</label>
+                  <input type="text" id="adminProdPI" placeholder="QH-101" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">স্টক স্ট্যাটাস</label>
+                  <select id="adminProdStock" class="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                    <option value="In Stock">ইন স্টক (In Stock)</option>
+                    <option value="Out of Stock">স্টক শেষ (Out of Stock)</option>
+                  </select>
+                </div>
+              </div>
 
-        // --- Supabase Authentication Logic for Admin ---
-        async function checkAdminSession() {
-            const { data: { session } } = await supabaseClient.auth.getSession();
-            if (session) {
-                document.getElementById('adminLoginBox').style.display = 'none';
-                document.getElementById('adminDashboard').style.display = 'block';
-            }
-        }
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">সেলার ID</label>
+                  <input type="text" id="adminProdSellerId" placeholder="SL-1001" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">সেলার নাম</label>
+                  <input type="text" id="adminProdSellerName" placeholder="দোকান বা সেলার নাম" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">সেলার WhatsApp নম্বর</label>
+                  <input type="tel" id="adminProdSellerPhone" placeholder="01920037889" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+              </div>
 
-        async function verifyAdmin() {
-            const email = document.getElementById('adminEmail').value;
-            const password = document.getElementById('adminPass').value;
-            
-            if(!email || !password) return notify('ইমেইল ও পাসওয়ার্ড আবশ্যক!');
-            
-            notify('লগইন হচ্ছে...');
-            
-            const { data, error } = await supabaseClient.auth.signInWithPassword({
-                email: email,
-                password: password,
-            });
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">ছবির URL</label>
+                  <input type="url" id="adminProdImageUrl" placeholder="https://..." class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">অথবা ছবি ফাইল আপলোড করুন</label>
+                  <input type="file" id="adminProdImageFile" accept="image/*" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-1.5 text-gray-300 text-xs">
+                </div>
+              </div>
 
-            if(error) {
-                notify('লগইন ব্যর্থ: ' + error.message);
-            } else {
-                document.getElementById('adminLoginBox').style.display = 'none';
-                document.getElementById('adminDashboard').style.display = 'block';
-                notify('লগইন সফল!'); 
-                fetchData();
-            }
-        }
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">রেটিং</label>
+                  <input type="text" id="adminProdRating" placeholder="4.9" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">কুপন কোড (যদি থাকে)</label>
+                  <input type="text" id="adminProdCoupon" placeholder="DISCOUNT10" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">রিটার্ন পলিসি</label>
+                  <input type="text" id="adminProdReturn" placeholder="৭ দিনের রিটার্ন পলিসি" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+              </div>
 
-        async function logoutAdmin() {
-            const { error } = await supabaseClient.auth.signOut();
-            if(!error) {
-                document.getElementById('adminLoginBox').style.display = 'block';
-                document.getElementById('adminDashboard').style.display = 'none';
-                document.getElementById('adminEmail').value = '';
-                document.getElementById('adminPass').value = '';
-                notify('লগআউট সফল!');
-            }
-        }
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">পণ্যের বিস্তারিত বিবরণ</label>
+                <textarea id="adminProdDesc" rows="3" placeholder="বিবরণ লিখুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs"></textarea>
+              </div>
 
-        const fileToBase64 = (file) => new Promise((resolve) => {
-            if (!file) return resolve(null);
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result);
-        });
+              <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/5 text-xs text-gray-300">
+                <span class="font-bold">ডেলিভারি পার্টনার্স:</span>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input type="checkbox" id="adminDPathao" checked class="accent-cyan-400"> পাঠাও (Pathao)
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input type="checkbox" id="adminDSteadfast" checked class="accent-purple-400"> স্টিডফাস্ট (Steadfast)
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input type="checkbox" id="adminDSundarban" checked class="accent-pink-400"> সুন্দরবন (Sundarban)
+                </label>
+              </div>
 
-        // ---------------- Q DATA FETCH & RENDER LOGIC (ORDERS) ----------------
-        async function fetchQData() {
-            const tbody = document.getElementById('qDataTableBody');
-            if(tbody) tbody.innerHTML = `<tr><td colspan="9" class="p-4 text-center text-gray-400">Loading data...</td></tr>`;
-            try {
-                const { data, error } = await supabaseClient.from('orders').select('*').order('id', { ascending: false });
-                if (error) throw error;
-                qDataOrders = data || [];
-                renderQDataTable();
-            } catch (err) {
-                console.error("Q Data fetch error: ", err);
-                if(tbody) tbody.innerHTML = `<tr><td colspan="9" class="p-4 text-center text-red-400">ডাটা লোড করতে সমস্যা হয়েছে! (orders টেবিল চেক করুন)</td></tr>`;
-            }
-        }
+              <div class="flex gap-2 pt-2">
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition">
+                  <i class="fas fa-save mr-1"></i> প্রোডাক্ট সেভ করুন
+                </button>
+                <button type="button" onclick="AdminPanel.resetProductForm()" class="bg-white/10 hover:bg-white/15 text-gray-300 font-bold px-4 py-2.5 rounded-xl text-xs transition">
+                  রিসেট
+                </button>
+              </div>
+            </form>
+          </div>
 
-        function renderQDataTable() {
-            const tbody = document.getElementById('qDataTableBody');
-            if(!tbody) return;
+          <!-- Product Table List -->
+          <div class="glass-panel p-5 rounded-3xl border border-white/10">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <h3 class="font-bold text-white text-sm">সকল প্রোডাক্টের তালিকা</h3>
+              <div class="w-full sm:w-64">
+                <input type="text" id="adminProductSearch" oninput="AdminPanel.renderProductList()" placeholder="নাম, PI বা সেলার দিয়ে খুঁজুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-cyan-400">
+              </div>
+            </div>
 
-            const term = (document.getElementById('qDataSearch')?.value || '').toLowerCase();
-            const filtered = qDataOrders.filter(o => {
-                return (o.customer_name || '').toLowerCase().includes(term)
-                    || (o.customer_phone || '').toLowerCase().includes(term)
-                    || (o.customer_address || '').toLowerCase().includes(term)
-                    || (o.pi || '').toLowerCase().includes(term)
-                    || (o.seller_id || '').toLowerCase().includes(term);
-            });
+            <div class="overflow-x-auto">
+              <table class="w-full text-left table-custom">
+                <thead>
+                  <tr>
+                    <th class="w-10">#</th>
+                    <th>প্রোডাক্ট</th>
+                    <th>PI</th>
+                    <th>মূল্য</th>
+                    <th>স্টক</th>
+                    <th class="text-right">অ্যাকশন</th>
+                  </tr>
+                </thead>
+                <tbody id="adminProductListTable"></tbody>
+              </table>
+            </div>
+          </div>
 
-            // Update stats (based on filtered list)
-            const totalOrders = filtered.length;
-            const totalQty = filtered.reduce((sum, o) => sum + (parseInt(o.quantity) || 0), 0);
-            const totalPrice = filtered.reduce((sum, o) => sum + (parseInt(o.total_price) || 0), 0);
-            document.getElementById('qStatTotal').innerText = totalOrders;
-            document.getElementById('qStatQty').innerText = totalQty;
-            document.getElementById('qStatPrice').innerText = '৳' + totalPrice;
+        </div>
 
-            if (filtered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="9" class="p-4 text-center text-gray-400">কোনো অর্ডার ডাটা পাওয়া যায়নি।</td></tr>`;
-                return;
-            }
+        <!-- 3. Q DATA SPREADSHEET (ORDERS) -->
+        <div id="adminSubSection_orders" class="admin-sub-section hidden space-y-4">
+          <div class="glass-panel p-5 rounded-3xl border border-emerald-500/20">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 border-b border-white/10 pb-4">
+              <div>
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                  <i class="fas fa-database text-emerald-400"></i> Q Data Page (অর্ডার ম্যানেজমেন্ট শীট)
+                </h3>
+                <p class="text-gray-400 text-xs mt-0.5">গ্রাহকদের অর্ডারের সকল তথ্য রিয়েল-টাইম শিট আকারে দেখা ও ডাউনলোড করা যাবে</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="AdminPanel.exportOrdersCSV()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition shadow-lg shadow-emerald-500/20">
+                  <i class="fas fa-file-excel"></i> Export Excel (CSV)
+                </button>
+              </div>
+            </div>
 
-            tbody.innerHTML = filtered.map((o, idx) => {
-                let date = 'N/A';
-                if(o.created_at) {
-                    try { date = new Date(o.created_at).toLocaleString('bn-BD', { hour12: true }); }
-                    catch(e) { date = o.created_at; }
-                }
-                return `
-                    <tr class="hover:bg-white/5 transition-colors border-b border-white/5">
-                        <td class="p-3 border border-white/10 text-center text-gray-400">${idx + 1}</td>
-                        <td class="p-3 border border-white/10 whitespace-nowrap text-xs text-gray-300">${date}<br><span class="text-brand-pink font-bold">${o.order_type || 'Buy'}</span></td>
-                        <td class="p-3 border border-white/10 font-bold text-white">${o.customer_name || 'N/A'}</td>
-                        <td class="p-3 border border-white/10 text-brand-cyan font-semibold whitespace-nowrap">${o.customer_phone || 'N/A'}${o.customer_alt_phone ? `<br><span class="text-xs text-gray-500">${o.customer_alt_phone}</span>` : ''}</td>
-                        <td class="p-3 border border-white/10 text-xs text-gray-300 max-w-[220px] break-words">${o.customer_address || 'N/A'}</td>
-                        <td class="p-3 border border-white/10 text-yellow-400 font-semibold whitespace-nowrap">${o.pi || 'N/A'}</td>
-                        <td class="p-3 border border-white/10 text-brand-purple font-semibold whitespace-nowrap">${o.seller_id || 'N/A'}</td>
-                        <td class="p-3 border border-white/10 text-center font-bold text-white">${o.quantity || 0} টি</td>
-                        <td class="p-3 border border-white/10 text-green-400 font-bold whitespace-nowrap">৳${o.total_price || 0}</td>
-                    </tr>
-                `;
-            }).join('');
-        }
+            <!-- Search Field -->
+            <div class="mb-4">
+              <input type="text" id="adminOrderSearch" oninput="AdminPanel.renderOrdersTable()" placeholder="কাস্টমার নাম, ফোন, Order ID, PI বা ঠিকানা দিয়ে খুঁজুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-xs focus:outline-none focus:border-emerald-400">
+            </div>
 
-        // Export current Q Data to CSV file
-        function exportQDataCSV() {
-            const term = (document.getElementById('qDataSearch')?.value || '').toLowerCase();
-            const filtered = qDataOrders.filter(o => {
-                return (o.customer_name || '').toLowerCase().includes(term)
-                    || (o.customer_phone || '').toLowerCase().includes(term)
-                    || (o.customer_address || '').toLowerCase().includes(term)
-                    || (o.pi || '').toLowerCase().includes(term)
-                    || (o.seller_id || '').toLowerCase().includes(term);
-            });
-            if(filtered.length === 0) { notify('এক্সপোর্ট করার মতো কোনো ডাটা নেই!'); return; }
+            <!-- Orders Spreadsheet Table -->
+            <div class="overflow-x-auto rounded-xl border border-white/10">
+              <table class="w-full text-left table-custom">
+                <thead>
+                  <tr>
+                    <th class="w-8">#</th>
+                    <th>Order ID &amp; সময়</th>
+                    <th>গ্রাহকের তথ্য</th>
+                    <th>ডেলিভারি ঠিকানা</th>
+                    <th>পণ্য ও PI</th>
+                    <th>পরিমাণ</th>
+                    <th>মোট মূল্য</th>
+                    <th>স্ট্যাটাস আপডেট</th>
+                    <th class="text-right">অ্যাকশন</th>
+                  </tr>
+                </thead>
+                <tbody id="adminOrdersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-            const headers = ['Date & Time', 'Customer Name', "What'sApp Number", 'Alt Number', 'Address', 'PI', 'Seller ID', 'Quantity', 'Total Price', 'Order Type'];
-            const rows = filtered.map(o => {
-                let date = '';
-                if(o.created_at) { try { date = new Date(o.created_at).toLocaleString('en-GB'); } catch(e) { date = o.created_at; } }
-                const esc = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
-                return [date, o.customer_name, o.customer_phone, o.customer_alt_phone, o.customer_address, o.pi, o.seller_id, o.quantity, o.total_price, o.order_type].map(esc).join(',');
-            });
-            const csvContent = '\uFEFF' + headers.map(h => `"${h}"`).join(',') + '\n' + rows.join('\n');
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = `Q_Data_Orders_${new Date().toISOString().slice(0,10)}.csv`;
-            link.click();
-            notify('CSV ডাউনলোড হচ্ছে...');
-        }
+        <!-- 4. Q HUB (CULTURE) SUB-SECTION -->
+        <div id="adminSubSection_culture" class="admin-sub-section hidden space-y-6">
+          <div class="glass-panel p-6 rounded-3xl border border-purple-500/20">
+            <h3 class="text-lg font-bold text-white mb-4 border-l-4 border-purple-400 pl-3">Q Hub (Culture) আপডেট যোগ করুন</h3>
+            <form id="adminCultureForm" onsubmit="event.preventDefault(); AdminPanel.saveCultureFromForm();" class="space-y-4">
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">শিরোনাম <span class="text-red-400">*</span></label>
+                <input type="text" id="adminCultureTitle" required placeholder="শিরোনাম লিখুন" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+              </div>
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">বিবরণ</label>
+                <textarea id="adminCultureDesc" rows="3" placeholder="আপডেটের বিস্তারিত লিখুন..." class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs"></textarea>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">ছবির URL</label>
+                  <input type="url" id="adminCultureImgUrl" placeholder="https://..." class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-300 mb-1">অথবা ছবি আপলোড করুন</label>
+                  <input type="file" id="adminCultureImgFile" accept="image/*" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-1.5 text-gray-300 text-xs">
+                </div>
+              </div>
+              <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition">
+                <i class="fas fa-plus mr-1"></i> Q Hub আপডেট পোস্ট করুন
+              </button>
+            </form>
+          </div>
 
-        // ---------------- PRODUCTS LOGIC ----------------
-        async function saveProduct() {
-            const dbId = document.getElementById('pDbId').value;
-            const name = document.getElementById('pName').value;
-            const price = document.getElementById('pPrice').value;
-            if(!name || !price) return notify('নাম ও মূল্য আবশ্যক');
-            
-            notify('আপডেট হচ্ছে...');
-            
-            const imgFile = document.getElementById('pImg').files[0];
-            const sellerImgFile = document.getElementById('pSellerImg').files[0];
-            
-            const record = {
-                name: name,
-                pi: document.getElementById('pPI').value,
-                price: parseInt(price),
-                sellerId: document.getElementById('pSellerId').value,
-                sellerName: document.getElementById('pSellerName').value,
-                sellerPhone: document.getElementById('pSellerPhone').value,
-                rating: document.getElementById('pRating').value,
-                coupon: document.getElementById('pCoupon').value,
-                stock: document.getElementById('pStock').value,
-                desc: document.getElementById('pDesc').value,
-                returnPolicy: document.getElementById('pReturn').value,
-                review: document.getElementById('pReview').value,
-                dPathao: document.getElementById('dPathao').checked,
-                dSteadfast: document.getElementById('dSteadfast').checked,
-                dSundarban: document.getElementById('dSundarban').checked
-            };
+          <div class="glass-panel p-5 rounded-3xl border border-white/10">
+            <h3 class="font-bold text-white text-sm mb-3">বর্তমান Q Hub পোস্টসমূহ</h3>
+            <div id="adminCultureList" class="space-y-2.5"></div>
+          </div>
+        </div>
 
-            if(imgFile) record.image = await fileToBase64(imgFile);
-            if(sellerImgFile) record.sellerImg = await fileToBase64(sellerImgFile);
+        <!-- 5. COMPLAINTS SUB-SECTION -->
+        <div id="adminSubSection_complaints" class="admin-sub-section hidden space-y-4">
+          <div class="glass-panel p-5 rounded-3xl border border-amber-500/20">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fas fa-headset text-amber-400"></i> গ্রাহক অভিযোগ বক্স
+            </h3>
+            <p class="text-gray-400 text-xs mb-4">ওয়েবসাইট থেকে সাবমিটকৃত অভিযোগের তালিকা</p>
+            <div id="adminComplaintsContainer" class="space-y-3"></div>
+          </div>
+        </div>
 
-            try {
-                if(dbId) {
-                    const { error } = await supabaseClient.from('products').update(record).eq('id', dbId);
-                    if(error) throw error;
-                    notify('প্রোডাক্ট আপডেট হয়েছে!');
-                } else {
-                    const { error } = await supabaseClient.from('products').insert([record]);
-                    if(error) throw error;
-                    notify('নতুন প্রোডাক্ট যোগ হয়েছে!');
-                }
-                resetProductForm();
-                fetchData();
-            } catch(e) { 
-                console.error("Save Product Error:", e);
-                notify('ডেটা সেভ হতে সমস্যা হয়েছে!'); 
-            }
-        }
+        <!-- 6. GITHUB DATABASE SYNC CENTER SUB-SECTION -->
+        <div id="adminSubSection_github" class="admin-sub-section hidden space-y-6">
+          <div class="glass-panel p-6 rounded-3xl border border-cyan-500/30">
+            <div class="flex items-center gap-3 mb-4 border-b border-white/10 pb-4">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center text-2xl">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">গিটহাব ডাটাবেস সিঙ্ক সেন্টার</h3>
+                <p class="text-gray-400 text-xs">আপনার ওয়েবসাইটের সম্পূর্ণ ডাটাবেস গিটহাবে সংরক্ষণ করুন এবং Vercel এ অটো-ডিপ্লয় করুন</p>
+              </div>
+            </div>
 
-        function editProduct(id) {
-            const p = products.find(x => x.id === id);
-            if(!p) return;
-            document.getElementById('adminProductTitle').innerText = 'প্রোডাক্ট আপডেট করুন';
-            document.getElementById('pDbId').value = p.id;
-            document.getElementById('pName').value = p.name;
-            document.getElementById('pPI').value = p.pi || '';
-            document.getElementById('pPrice').value = p.price;
-            document.getElementById('pSellerId').value = p.sellerId || '';
-            document.getElementById('pSellerName').value = p.sellerName || '';
-            document.getElementById('pSellerPhone').value = p.sellerPhone || '';
-            document.getElementById('pRating').value = p.rating || '';
-            document.getElementById('pCoupon').value = p.coupon || '';
-            document.getElementById('pStock').value = p.stock || 'In Stock';
-            document.getElementById('pDesc').value = p.desc || '';
-            document.getElementById('pReturn').value = p.returnPolicy || '';
-            document.getElementById('pReview').value = p.review || '';
-            
-            document.getElementById('dPathao').checked = p.dPathao ?? true;
-            document.getElementById('dSteadfast').checked = p.dSteadfast ?? true;
-            document.getElementById('dSundarban').checked = p.dSundarban ?? true;
-            
-            window.scrollTo(0, document.getElementById('adminProductTitle').offsetTop - 100);
-        }
+            <div class="space-y-4 max-w-xl">
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">GitHub Repository (Owner/Repo)</label>
+                <input type="text" id="adminGithubRepo" placeholder="eQro-sit/Q.hobby-1" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs font-mono">
+              </div>
 
-        async function deleteProduct(id) {
-            if(!confirm('আপনি কি নিশ্চিত প্রোডাক্টটি ডিলিট করবেন?')) return;
-            try {
-                const { error } = await supabaseClient.from('products').delete().eq('id', id);
-                if(error) throw error;
-                notify('প্রোডাক্ট ডিলিট হয়েছে!');
-                fetchData();
-            } catch(e) { 
-                console.error("Delete Error:", e);
-                notify('ডিলিট করতে সমস্যা হয়েছে!'); 
-            }
-        }
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">GitHub Branch</label>
+                <input type="text" id="adminGithubBranch" placeholder="main" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs font-mono">
+              </div>
 
-        function resetProductForm() {
-            document.getElementById('adminProductTitle').innerText = 'প্রোডাক্ট যোগ করুন';
-            document.getElementById('pDbId').value = '';
-            document.querySelectorAll('#adminProductTitle ~ div input[type="text"], #adminProductTitle ~ div input[type="number"], #adminProductTitle ~ textarea, #adminProductTitle ~ div input[type="file"]').forEach(el => el.value = '');
-            document.getElementById('dPathao').checked = true;
-            document.getElementById('dSteadfast').checked = true;
-            document.getElementById('dSundarban').checked = true;
-        }
+              <div>
+                <label class="block text-xs text-gray-300 mb-1">GitHub Personal Access Token (PAT)</label>
+                <input type="password" id="adminGithubToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs font-mono">
+                <p class="text-[11px] text-gray-400 mt-1">
+                  গিটহাব থেকে সরাসরি কমিট করতে 'repo' পারমিশনসহ একটি টোকেন দিন। (GitHub Settings &gt; Developer Settings &gt; Personal Access Tokens)
+                </p>
+              </div>
 
-        // ---------------- CULTURE (Q HUB) LOGIC ----------------
-        async function saveCulture() {
-            const dbId = document.getElementById('cDbId').value;
-            const title = document.getElementById('cTitle').value;
-            const desc = document.getElementById('cDesc').value;
-            if(!title) return notify('টাইটেল আবশ্যক!');
-            
-            notify('আপডেট হচ্ছে...');
-            const imgFile = document.getElementById('cImg').files[0];
-            
-            const record = { title: title, description: desc };
-            if(imgFile) record.image = await fileToBase64(imgFile);
+              <div class="flex flex-wrap gap-2.5 pt-2">
+                <button onclick="AdminPanel.saveGitHubSettings()" class="bg-white/10 hover:bg-white/15 text-white font-bold px-4 py-2 rounded-xl text-xs transition">
+                  সেটিংস সেভ করুন
+                </button>
+                <button id="btnSyncGithub" onclick="AdminPanel.pushToGithub()" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold px-5 py-2 rounded-xl text-xs transition flex items-center gap-1.5 shadow-lg shadow-cyan-500/20">
+                  <i class="fab fa-github"></i> Save &amp; Commit Database to GitHub
+                </button>
+              </div>
+            </div>
 
-            try {
-                if(dbId) {
-                    const { error } = await supabaseClient.from('culture').update(record).eq('id', dbId);
-                    if(error) throw error;
-                    notify('Q Hub ডেটা আপডেট হয়েছে!');
-                } else {
-                    const { error } = await supabaseClient.from('culture').insert([record]);
-                    if(error) throw error;
-                    notify('নতুন Q Hub ডেটা যোগ হয়েছে!');
-                }
-                resetCultureForm();
-                fetchData();
-            } catch(e) { 
-                console.error("Save Culture Error:", e);
-                notify('ডেটা সেভ হতে সমস্যা হয়েছে!'); 
-            }
-        }
+            <!-- Offline JSON Backup / Restore -->
+            <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h4 class="font-bold text-white text-sm">ম্যানুয়াল ব্যাকআপ ও রিস্টোর (JSON Backup)</h4>
+                <p class="text-gray-400 text-xs">সম্পূর্ণ ডাটাবেস এক ক্লিকে ডাউনলোড বা রিস্টোর করুন</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="GithubDB.exportBackup()" class="bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1">
+                  <i class="fas fa-download"></i> Download Backup
+                </button>
+                <label class="bg-white/10 hover:bg-white/15 text-gray-300 border border-white/10 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1">
+                  <i class="fas fa-upload"></i> Restore
+                  <input type="file" accept=".json" class="hidden" onchange="const f = this.files[0]; if(f) { const r = new FileReader(); r.onload = (e) => { if(GithubDB.importBackup(e.target.result)) { App.toast('ডাটাবেস রিস্টোর সফল হয়েছে!', 'success'); location.reload(); } else { App.toast('রিস্টোর ব্যর্থ!', 'error'); } }; r.readAsText(f); }">
+                </label>
+              </div>
+            </div>
 
-        function editCulture(id) {
-            const c = cultures.find(x => x.id === id);
-            if(!c) return;
-            document.getElementById('adminCultureTitle').innerText = 'Q Hub আপডেট করুন';
-            document.getElementById('cDbId').value = c.id;
-            document.getElementById('cTitle').value = c.title || '';
-            document.getElementById('cDesc').value = c.description || '';
-            window.scrollTo(0, document.getElementById('adminCultureTitle').offsetTop - 100);
-        }
+          </div>
+        </div>
 
-        async function deleteCulture(id) {
-            if(!confirm('আপনি কি নিশ্চিত Q Hub ডেটা ডিলিট করবেন?')) return;
-            try {
-                const { error } = await supabaseClient.from('culture').delete().eq('id', id);
-                if(error) throw error;
-                notify('Q Hub ডেটা ডিলিট হয়েছে!');
-                fetchData();
-            } catch(e) { 
-                console.error("Delete Culture Error:", e);
-                notify('ডিলিট করতে সমস্যা হয়েছে!'); 
-            }
-        }
+      </div>
 
-        function resetCultureForm() {
-            document.getElementById('adminCultureTitle').innerText = 'Q Hub (Culture) ডেটা যোগ করুন';
-            document.getElementById('cDbId').value = '';
-            document.getElementById('cTitle').value = '';
-            document.getElementById('cDesc').value = '';
-            document.getElementById('cImg').value = '';
-        }
+    </div>
 
-        // ---------------- COMMON SEARCH LOGIC ----------------
-        function searchAdminData() {
-            const term = document.getElementById('searchData').value.toLowerCase();
-            const list = document.getElementById('adminDataList');
-            const manageType = document.getElementById('manageType').value;
-            if(!list) return;
+  </main>
 
-            if(manageType === 'products') {
-                const filtered = products.filter(p => p.name.toLowerCase().includes(term) || (p.pi && p.pi.toLowerCase().includes(term)));
-                list.innerHTML = filtered.map(p => `
-                    <div class="flex justify-between items-center bg-black/30 p-3 rounded-lg border border-white/5">
-                        <div>
-                            <span class="font-bold text-sm">${p.name}</span>
-                            <span class="text-xs text-brand-cyan ml-2">PI: ${p.pi || 'N/A'}</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button onclick="editProduct(${p.id})" class="text-blue-400 px-2"><i class="fas fa-edit"></i></button>
-                            <button onclick="deleteProduct(${p.id})" class="text-red-400 px-2"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                `).join('');
-            } else {
-                const filtered = cultures.filter(c => c.title.toLowerCase().includes(term));
-                list.innerHTML = filtered.map(c => `
-                    <div class="flex justify-between items-center bg-black/30 p-3 rounded-lg border border-brand-pink/30">
-                        <div><span class="font-bold text-sm text-brand-pink">${c.title}</span></div>
-                        <div class="flex gap-2">
-                            <button onclick="editCulture(${c.id})" class="text-blue-400 px-2"><i class="fas fa-edit"></i></button>
-                            <button onclick="deleteCulture(${c.id})" class="text-red-400 px-2"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        }
+  <!-- FIXED BOTTOM NAVIGATION BAR -->
+  <nav class="bottom-nav">
+    <button id="bottomNavBtn_home" onclick="App.switchPanel('public', 'home')" class="nav-tab-btn active">
+      <i class="fas fa-home"></i>
+      <span>হোম</span>
+    </button>
+    <button id="bottomNavBtn_shop" onclick="App.switchPanel('public', 'shop')" class="nav-tab-btn">
+      <i class="fas fa-shopping-bag"></i>
+      <span>শপ</span>
+    </button>
+    <button id="bottomNavBtn_sell" onclick="App.switchPanel('public', 'sell')" class="nav-tab-btn">
+      <i class="fas fa-store"></i>
+      <span>সেল</span>
+    </button>
+    <button id="bottomNavBtn_user" onclick="App.switchPanel('user')" class="nav-tab-btn">
+      <i class="fas fa-user-circle"></i>
+      <span>একাউন্ট</span>
+    </button>
+    <button id="bottomNavBtn_admin" onclick="App.switchPanel('admin')" class="nav-tab-btn">
+      <i class="fas fa-cog"></i>
+      <span>এডমিন</span>
+    </button>
+  </nav>
 
-        // Start Fetch and Session Check on Load
-        window.onload = () => { 
-            fetchData(); 
-            checkAdminSession();
-        };
-    </script>
+  <!-- Modular Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/github-db.js"></script>
+  <script src="assets/js/public-panel.js"></script>
+  <script src="assets/js/user-panel.js"></script>
+  <script src="assets/js/admin-panel.js"></script>
+  <script src="assets/js/app.js"></script>
+
 </body>
 </html>
